@@ -1,4 +1,0 @@
-# robots.txt for https://www.marktai.com
-
-User-agent: *
-Disallow: /T9/ # This is for game API
