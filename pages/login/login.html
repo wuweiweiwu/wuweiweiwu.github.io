@@ -1,0 +1,100 @@
+<!-- hmac-sha256 library -->
+<script
+  src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit"
+  async defer
+></script>
+
+
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<!-- <header class="intro-header" style="background-image: url('https://www.marktai.com/img/lock-bg.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="page-heading">
+                    <h1>Meta Tic Tac Toe</h1>
+                    <hr class="small">
+                    <span class="subheading">こんにちは</span>
+                    <p class="post-meta"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+ -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1>Login</h1>
+<!--                <p>There are currently two test accounts: me and you.</p>
+
+                <p>username: me</p> 
+                password: password
+
+               <p> username: you</p>
+                password: password
+
+				<p>Check back often for further updates!</p> -->
+				<form>
+					<div class="form-group" ng-submit="login()">
+						<label for="usr">Username:</label>
+						<input type="text" ng-model="$root.username" class="form-control" ng-enter="login()" id="usr">
+					</div>
+					<div class="form-group" ng-submit="login()">
+						<label for="pwd">Password:</label>
+						<input type="password" ng-model="password" class="form-control" ng-enter="login()" id="pwd">
+					</div>
+				</form>
+				
+				<button ng-click="login()" class="btn btn-default">Login</button>
+
+				<p>New here? <a href="#/register">Register</a></p>
+                <!-- <button ng-click="verifySecret()" class="btn btn-default">Verify Secret</button> -->
+				
+
+
+				<p ng-show = "out && false" style = "white-space:pre-wrap; word-wrap: break-word" ng-bind='out' ></p>
+
+				<div ng-show="userid != -1">
+					<br>
+                    <h3>Games:</h3>
+					<h4>My Turn:</h4>
+					<ul>
+						<div ng-repeat="game in myTurnGames">
+							<li><a ng-href="#/game#{{game}}">{{game + " with " + opponents[game]}}</a></li>
+						</div>
+					</ul>
+
+                    <h4>Opponent Turn:</h4>
+                    <ul>
+                        <div ng-repeat="game in opponentTurnGames">
+                            <li><a ng-href="#/game#{{game}}">{{game + " with " + opponents[game]}}</a></li>
+                        </div>
+                    </ul>
+
+                    <h4>Done:</h4>
+                    <ul>
+                        <div ng-repeat="game in doneGames">
+                            <li><a ng-href="#/game#{{game}}">{{game + " with " + opponents[game]}}</a></li>
+                        </div>
+                    </ul>
+
+
+                    <div class="form-group row" ng-submit="makeGame()">
+                        <label for="player2">Other Player's Username:</label>
+                        <div class = "col-md-10">
+                            <input type="text" ng-model="player2" class="form-control" ng-enter="makeGame()" id="player2">
+                        </div>
+                        <div class = "col-md-2">
+                            <button ng-click="makeGame()" class="btn btn-default">Make Game</button>
+                        </div>
+
+                    </div>
+				</div>
+            </div>
+        </div>
+        <div ng-bind="error"> </div>
+    </div>
+</article>
