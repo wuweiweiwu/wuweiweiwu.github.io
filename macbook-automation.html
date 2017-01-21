@@ -72,7 +72,7 @@
 				data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
 				success: function(data) {
 					setResponse(JSON.stringify(data, undefined, 2));
-					$("hresponse").text(data.result.fulfillment.speech);
+					$("#hresponse").text(JSON.parse(data)['result']['fulfillment']['speech'];
 				},
 				error: function() {
 					setResponse("Internal Server Error");
