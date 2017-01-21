@@ -72,6 +72,7 @@
 				data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
 				success: function(data) {
 					setResponse(JSON.stringify(data, undefined, 2));
+					$("hresponse").text(data.result.fulfillment.speech);
 				},
 				error: function() {
 					setResponse("Internal Server Error");
@@ -81,7 +82,6 @@
 		}
 		function setResponse(val) {
 			$("#response").text(val);
-			$("#hresponse").text(val.result.speech);
 		}
 	</script>
 	<style type="text/css">
