@@ -14,7 +14,6 @@ function Person(src, x, y, speed, color) {
 Person.prototype.draw = function(ctx, showLines) {
     ctx.drawImage(this.img, this.x-this.width/2, this.y-this.height/2, this.width, this.height);
     if (showLines){
-      ctx.setLineDash([5, 15]);
       ctx.strokeStyle = this.lineColor;
       ctx.lineWidth = 2;
       ctx.beginPath();

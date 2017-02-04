@@ -25,7 +25,7 @@ function init() {
     carson = new Person('img/carson.png', canvas.width/2, canvas.height/2, 2, 'rgb(255, 0, 0)' );
     pence = new Person('img/pence.png', canvas.width/2, canvas.height/2, 3, 'rgb(255, 0, 0)' );
 
-    me = new Person('img/trump.png', 0, 0, 5, 'rgb(0, 255, 48)' );
+    me = new Person('img/trump.png', 0, 0, 5, 'rgb(0, 0, 0)' );
 
     window.requestAnimationFrame(updateCanvas);
 }
