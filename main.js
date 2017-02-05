@@ -82,9 +82,13 @@ function pickTargets() {
                 }
             }
 
-            if (minDist != Number.MAX_SAFE_INTEGER) {
+            if (minDist < Number.MAX_SAFE_INTEGER) {
                 bad_peeps[i].setTarget(bad_peeps[target].x, bad_peeps[target].y);
                 if (showLines) drawLine(bad_peeps[i].x, bad_peeps[i].y, bad_peeps[target].x, bad_peeps[target].y, 'rgb(0, 255, 0)');
+            }else{//no targets cuz youre smallest
+              var close = closest(bad_peeps[i]);
+              bad_peeps[i].runAwayFrom(bad_peeps[close].x, bad_peeps[close].y);
+              if (showLines) drawLine(bad_peeps[i].x, bad_peeps[i].y, bad_peeps[close].x, bad_peeps[close].y, 'rgb(255, 0, 0)');
             }
 
         }

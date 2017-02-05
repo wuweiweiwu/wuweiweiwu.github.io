@@ -4,7 +4,7 @@ function Person(src, speed) {
     //center of the image
     this.x = this.randomX();
     this.y = this.randomY();
-    var rand = Math.random();
+    var rand = Math.random() + .25;
     this.width = 106.75 * rand;
     this.height = 136.75 * rand;
     this.magnitude = speed;
@@ -77,7 +77,7 @@ Person.prototype.reborn = function(ctx) {
     this.killed = false;
     this.x = this.randomX();
     this.y = this.randomY();
-    var rand = Math.random();
+    var rand = Math.random() + .25;
     this.width = 106.75 * rand;
     this.height = 136.75 * rand;
     this.draw(ctx);
