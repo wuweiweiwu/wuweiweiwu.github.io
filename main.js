@@ -43,9 +43,10 @@ function distance(p1, p2) {
     return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
 }
 
-function drawLine(x1, y1, x2, y2, color) {
+function drawLine(x1, y1, x2, y2, color, dash) {
+    ctx.setLineDash([5, 3]); /*dashes are 5px and spaces are 3px*/
     ctx.strokeStyle = color;
-    ctx.lineWidth = 2;
+    ctx.lineWidth = 3;
     ctx.beginPath();
     ctx.moveTo(x1, y1);
     ctx.lineTo(x2, y2);
@@ -54,39 +55,51 @@ function drawLine(x1, y1, x2, y2, color) {
 
 function pickTargets() {
     for (var i = 0; i < bad_peeps.length - 1; i++) {
-        var minDist = Number.MAX_SAFE_INTEGER;
-        var target = 0;
+        //run away if within 500 someone is bigger than you
+        var minDist = 500;
+        var danger = 0;
         for (var j = 0; j < bad_peeps.length; j++) {
 
-            if (distance(bad_peeps[i], bad_peeps[j]) < minDist && bad_peeps[i].size() > bad_peeps[j].size() && i != j && !bad_peeps[i].killed && !bad_peeps[j].killed) {
-                target = j;
+            if (distance(bad_peeps[i], bad_peeps[j]) < minDist && bad_peeps[i].size() < bad_peeps[j].size() && i != j && !bad_peeps[i].killed && !bad_peeps[j].killed) {
+                danger = j;
                 minDist = distance(bad_peeps[i], bad_peeps[j])
             }
         }
 
-        if (minDist != Number.MAX_SAFE_INTEGER) {
+        if (minDist < 500) {
             //set target here
-            bad_peeps[i].setTarget(bad_peeps[target].x, bad_peeps[target].y);
-            if (showLines) drawLine(bad_peeps[i].x, bad_peeps[i].y, bad_peeps[target].x, bad_peeps[target].y, 'rgb(59, 255, 0)');
+            bad_peeps[i].runAwayFrom(bad_peeps[danger].x, bad_peeps[danger].y);
+            if (showLines) drawLine(bad_peeps[i].x, bad_peeps[i].y, bad_peeps[danger].x, bad_peeps[danger].y, 'rgb(255, 0, 0)');
 
         } else {
-            //everyone is >= you run away
-            var closest = Number.MAX_SAFE_INTEGER;
-            var enemy = 0;
-            for( var x=0;x< bad_peeps.length;x++){
-              if (i!=x && bad_peeps[i].size() < bad_peeps[x].size() && distance(bad_peeps[i],bad_peeps[x]) < closest && !bad_peeps[i].killed && !bad_peeps[x].killed){
-                closest = distance(bad_peeps[i],bad_peeps[x]);
-                enemy = x;
-              }
+            //not in danger-- choose target
+            var minDist = Number.MAX_SAFE_INTEGER;
+            var target = 0;
+            for (var x = 0; x < bad_peeps.length; x++) {
+                if (i != x && bad_peeps[i].size() > bad_peeps[x].size() && distance(bad_peeps[i], bad_peeps[x]) < minDist && !bad_peeps[i].killed && !bad_peeps[x].killed) {
+                    minDist = distance(bad_peeps[i], bad_peeps[x]);
+                    target = x;
+                }
             }
 
-            if (closest != Number.MAX_SAFE_INTEGER){
-              bad_peeps[i].runAwayFrom(bad_peeps[enemy].x,bad_peeps[enemy].y);
-              if (showLines) drawLine(bad_peeps[i].x, bad_peeps[i].y, bad_peeps[enemy].x, bad_peeps[enemy].y, 'rgb(255, 0, 0)');
+            if (minDist != Number.MAX_SAFE_INTEGER) {
+                bad_peeps[i].setTarget(bad_peeps[target].x, bad_peeps[target].y);
+                if (showLines) drawLine(bad_peeps[i].x, bad_peeps[i].y, bad_peeps[target].x, bad_peeps[target].y, 'rgb(0, 255, 0)');
             }
 
         }
     }
+}
+function closest(person){
+  var closest = Number.MAX_SAFE_INTEGER;
+  var index = 0;
+  for (var i = 0; i < bad_peeps.length; i++) {
+    if(bad_peeps[i] != person && distance(bad_peeps[i], person) < closest){
+      closest = distance(bad_peeps[i], person);
+      index = i;
+    }
+  }
+  return index;
 }
 
 function updateCanvas() {

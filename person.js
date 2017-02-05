@@ -31,10 +31,10 @@ Person.prototype.setTarget = function(targX, targY) {
     incx = diffx < 5 ? 0 : incx;
     incy = diffy < 5 ? 0 : incy;
 
-    if (this.x - this.width / 2 - incx < 0 && targX <= this.x || this.x + this.width / 2 + incx > window.innerWidth && targX >= window.innerWidth) {
+    if (this.x - this.width / 2 - incx < 0 && targX <= this.x || this.x + this.width / 2 + incx > window.innerWidth && targX >= window.innerWidth-5) {
         incx = 0;
     }
-    if (this.y - this.height / 2 - incy < 0 && targY <= this.y || this.y + this.height / 2 + incy > window.innerHeight && targY >= window.innerHeight) {
+    if (this.y - this.height / 2 - incy < 0 && targY <= this.y || this.y + this.height / 2 + incy > window.innerHeight && targY >= window.innerHeight-5) {
         incy = 0;
     }
     this.x += incx;
@@ -56,7 +56,7 @@ Person.prototype.runAwayFrom = function(targX, targY) {
     incx = diffx < 5 ? 0 : incx;
     incy = diffy < 5 ? 0 : incy;
 
-    if (this.x - this.width / 2 - incx < 0 || this.x + this.width / 2 + incx > window.innerWidth ) {
+    if (this.x - this.width / 2 - incx < 0 || this.x + this.width / 2 + incx > window.innerWidth) {
         incx = 0;
     }
     if (this.y - this.height / 2 - incy < 0 || this.y + this.height / 2 + incy > window.innerHeight) {
