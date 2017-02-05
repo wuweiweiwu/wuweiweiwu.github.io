@@ -113,12 +113,12 @@ function updateCanvas() {
     pickTargets();
 
     //reborn them
-    // for (i = 0; i < bad_peeps.length; i++) {
-    //     if (bad_peeps[i].killed) {
-    //         bad_peeps[i].reborn(ctx);
-    //         break;
-    //     }
-    // }
+    for (i = 0; i < bad_peeps.length; i++) {
+        if (bad_peeps[i].killed) {
+            bad_peeps[i].reborn(ctx);
+            break;
+        }
+    }
 
     window.requestAnimationFrame(updateCanvas);
 }
