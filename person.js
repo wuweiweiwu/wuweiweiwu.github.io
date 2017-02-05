@@ -1,71 +1,95 @@
-function Person(src, x, y, speed, color, isSelf) {
+function Person(src, speed) {
     this.img = new Image();
     this.img.src = src;
     //center of the image
-    this.x = x;
-    this.y = y;
-    if (isSelf) {
-        this.targetX = window.innerWidth / 2;
-        this.targetY = window.innerHeight / 2;
-    } else {
-        this.targetX = 0;
-        this.targetY = 0;
-    }
-    this.width = 106.75;
-    this.height = 136.75;
+    this.x = this.randomX();
+    this.y = this.randomY();
+    var rand = Math.random();
+    this.width = 106.75 * rand;
+    this.height = 136.75 * rand;
     this.magnitude = speed;
-    this.lineColor = color;
-    this.isSelf = isSelf;
+    this.killed = false;
 }
-Person.prototype.draw = function(ctx, showLines) {
-    ctx.drawImage(this.img, this.x - this.width / 2, this.y - this.height / 2, this.width, this.height);
-    if (showLines) {
-        ctx.strokeStyle = this.lineColor;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(this.x, this.y);
-        ctx.lineTo(this.targetX, this.targetY);
-        ctx.stroke();
+Person.prototype.draw = function(ctx) {
+    if (!this.killed) {
+        ctx.drawImage(this.img, this.x - this.width / 2, this.y - this.height / 2, this.width, this.height);
     }
 }
-
-Person.prototype.updateTarget = function(targetX, targetY) {
-    this.targetX = targetX;
-    this.targetY = targetY;
-
-    diffx = Math.abs(this.x - this.targetX);
-    diffy = Math.abs(this.y - this.targetY);
+Person.prototype.setTarget = function(targX, targY) {
+    diffx = Math.abs(this.x - targX);
+    diffy = Math.abs(this.y - targY);
 
     angle = Math.atan2(diffy, diffx);
 
     incx = this.magnitude * Math.cos(angle);
     incy = this.magnitude * Math.sin(angle);
 
-    if (!this.isSelf) {
-        incx = -incx;
-        incy = -incy;
 
-        if (this.x + this.width / 2 > window.innerWidth || this.x - this.width / 2 < 0) {
-            incx = 0;
-        }
+    incx = targX < this.x ? -incx : incx;
+    incy = targY < this.y ? -incy : incy;
 
-        if (this.y + this.height / 2 > window.innerHeight || this.y - this.height / 2 < 0) {
-            incy = 0;
-        }
-    } else {
-        if (this.x - this.width / 2 < 0 && this.targetX < this.x || this.x + this.width / 2 > window.innerWidth && this.targetX > this.x) {
-            incx = 0;
-        }
-        if (this.y - this.height / 2 < 0 && this.targetY < this.y || this.y + this.height / 2 > window.innerHeight && this.targetY > this.y) {
-            incy = 0;
-        }
+    incx = diffx < 5 ? 0 : incx;
+    incy = diffy < 5 ? 0 : incy;
+
+    if (this.x - this.width / 2 - incx < 0 && targX <= this.x || this.x + this.width / 2 + incx > window.innerWidth && targX >= window.innerWidth) {
+        incx = 0;
     }
+    if (this.y - this.height / 2 - incy < 0 && targY <= this.y || this.y + this.height / 2 + incy > window.innerHeight && targY >= window.innerHeight) {
+        incy = 0;
+    }
+    this.x += incx;
+    this.y += incy;
+}
+Person.prototype.runAwayFrom = function(targX, targY) {
+    diffx = Math.abs(this.x - targX);
+    diffy = Math.abs(this.y - targY);
+
+    angle = Math.atan2(diffy, diffx);
+
+    incx = this.magnitude * Math.cos(angle);
+    incy = this.magnitude * Math.sin(angle);
 
 
-    if (diffx > 5) {
-        this.x += this.targetX < this.x ? -incx : incx;
+    incx = targX < this.x ? -incx : incx;
+    incy = targY < this.y ? -incy : incy;
+
+    incx = diffx < 5 ? 0 : incx;
+    incy = diffy < 5 ? 0 : incy;
+
+    if (this.x - this.width / 2 - incx < 0 || this.x + this.width / 2 + incx > window.innerWidth ) {
+        incx = 0;
     }
-    if (diffy > 5) {
-        this.y += this.targetY < this.y ? -incy : incy;
+    if (this.y - this.height / 2 - incy < 0 || this.y + this.height / 2 + incy > window.innerHeight) {
+        incy = 0;
     }
+    this.x -= incx;
+    this.y -= incy;
+}
+
+Person.prototype.intersect = function(person) {
+    //compare it to person.x and person.y
+    return (this.x - this.width / 2 < person.x && this.x + this.width / 2 > person.x && this.y - this.height / 2 < person.y && this.y + this.height / 2 > person.y);
+}
+Person.prototype.kill = function() {
+    this.killed = true;
+}
+Person.prototype.reborn = function(ctx) {
+    this.killed = false;
+    this.x = this.randomX();
+    this.y = this.randomY();
+    this.draw(ctx);
+}
+Person.prototype.grow = function() {
+    this.width += 5;
+    this.height += 5;
+}
+Person.prototype.size = function() {
+    return this.width * this.height;
+}
+Person.prototype.randomX = function() {
+    return Math.random() * (window.innerWidth - 100 - 100) + 100;
+}
+
+Person.prototype.randomY = function() {
+    return Math.random() * (window.innerHeight - 100 - 100) + 100;
 }
