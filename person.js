@@ -77,6 +77,9 @@ Person.prototype.reborn = function(ctx) {
     this.killed = false;
     this.x = this.randomX();
     this.y = this.randomY();
+    var rand = Math.random();
+    this.width = 106.75 * rand;
+    this.height = 136.75 * rand;
     this.draw(ctx);
 }
 Person.prototype.grow = function() {
