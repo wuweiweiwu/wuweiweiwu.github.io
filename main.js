@@ -67,7 +67,7 @@ function pickTargets() {
         if (minDist != Number.MAX_SAFE_INTEGER) {
             //set target here
             bad_peeps[i].setTarget(bad_peeps[target].x, bad_peeps[target].y);
-            drawLine(bad_peeps[i].x, bad_peeps[i].y, bad_peeps[target].x, bad_peeps[target].y, 'rgb(59, 255, 0)');
+            if (showLines) drawLine(bad_peeps[i].x, bad_peeps[i].y, bad_peeps[target].x, bad_peeps[target].y, 'rgb(59, 255, 0)');
 
         } else {
             //everyone is >= you run away
@@ -82,7 +82,7 @@ function pickTargets() {
 
             if (closest != Number.MAX_SAFE_INTEGER){
               bad_peeps[i].runAwayFrom(bad_peeps[enemy].x,bad_peeps[enemy].y);
-              drawLine(bad_peeps[i].x, bad_peeps[i].y, bad_peeps[enemy].x, bad_peeps[enemy].y, 'rgb(255, 0, 0)');
+              if (showLines) drawLine(bad_peeps[i].x, bad_peeps[i].y, bad_peeps[enemy].x, bad_peeps[enemy].y, 'rgb(255, 0, 0)');
             }
 
         }
@@ -107,7 +107,7 @@ function updateCanvas() {
 
     if (!me.killed) {
         me.setTarget(mouseX, mouseY);
-        drawLine(me.x, me.y, mouseX, mouseY, 'rgb(173, 48, 208)');
+        if (showLines) drawLine(me.x, me.y, mouseX, mouseY, 'rgb(173, 48, 208)');
     }
 
     pickTargets();
