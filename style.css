@@ -23,6 +23,20 @@ body {
   text-shadow: 0px 0px 20px white;
   line-height: 1.2;
 }
+.score{
+    position:absolute;
+    margin-left: -150px;
+    width: 300px;
+    bottom:0px;
+    right:50%;
+    left:50%
+}
+#died{
+  color: #bb242d;
+}
+#score{
+  color: #34cd30;
+}
 a {
   color: #0040ff;
   text-decoration: none;

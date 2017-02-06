@@ -6,6 +6,8 @@ function init() {
     mouseX = window.innerWidth / 2;
     mouseY = window.innerHeight / 2;
     showLines = 0;
+    score = 0;
+    died = 0;
 
     if (canvas.getContext) {
         ctx = canvas.getContext('2d');
@@ -108,10 +110,17 @@ function closest(person){
 
 function updateCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+    updateScore();
     for (i = 0; i < bad_peeps.length; i++) {
         for (j = 0; j < bad_peeps.length; j++) {
             if (bad_peeps[i].intersect(bad_peeps[j]) && !bad_peeps[j].killed && !bad_peeps[i].killed && bad_peeps[i].size() > bad_peeps[j].size()) {
+              if(bad_peeps[i] == me){
+                score ++;
+              }
+              if(bad_peeps[j] == me){
+                score = 0;
+                died ++;
+              }
                 bad_peeps[j].kill();
                 bad_peeps[i].grow();
             }
@@ -138,4 +147,8 @@ function updateCanvas() {
     }
 
     window.requestAnimationFrame(updateCanvas);
+}
+function updateScore(){
+  document.getElementById('score').innerHTML = score;
+  document.getElementById('died').innerHTML = died;
 }
