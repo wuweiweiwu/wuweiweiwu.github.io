@@ -118,7 +118,6 @@ function updateCanvas() {
                 score ++;
               }
               if(bad_peeps[j] == me){
-                score = 0;
                 died ++;
               }
                 bad_peeps[j].kill();
