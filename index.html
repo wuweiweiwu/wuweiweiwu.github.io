@@ -1,17 +1,26 @@
 <html>
 
 <head>
-    <title>Trump Chase</title>
-    <link rel="icon" href="https://winterstudios.se/wp-content/uploads/2016/03/FAVICON-W.png" />
+    <title>CHRISTINA CHALUPAS</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAACGvWAAA5hAD///8AAMbGABcaHAA/xugAUpzvAIT//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM1AAAzMzMzMwZmZgADMzMwYAIGZmADMzBgEgZmZmADMGAhIGZmZmAwYHcgZmZmZgBgcRBmZmZmAGCBIGZmZmYAYIEgZmZmZgBmAoBmZmZmAGYIQGZmZmYAZmAQZmZmZgMGZgQAZmZmAwZmYABmZmYDMGZmAAZmYDMzAAAzMAADPB/wAAgD8AAAAPAAAAAwAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAMABAADhwwAA" rel="icon" type="image/x-icon" />
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8" />
 </head>
 
 <script src="main.js"></script>
-<script src="person.js"></script>
+<script src="taco.js"></script>
 <script src="jquery-3.1.1.min.js"></script>
 
 <body onload="init();">
+
+  <div class='score'>
+    <p>
+      CHRISTINA HAS EATEN:
+      <b id="score"></b>
+       TACOS
+    </p>
+  </div>
+
   <div class="text">
     <p>
       <b class="hello">OH HAI!</b>
@@ -33,20 +42,8 @@
         <a href="mailto:wuxx1045@umn.edu">email</a>
       </li>
 ]    </ul>
-    <p class='play'>
-      or you can help <a href="#" onclick="$('.text').fadeOut();">BERNIE SURVIVE</a>!
-    </p>
-  </div>
-
-  <div class='score'>
-    <p>
-      BERNIE HAS EATEN:
-      <b id="score"></b>
-       PEOPLE
-    <br />
-      BERNIE HAS DIED:
-      <b id="died" color="rgb(255, 176, 0)"></b>
-      TIMES
+    <p style="text-align: right;">
+      ... or you can feed Christina <a href="#" onclick="$('.text').fadeOut();">LOTS OF TACOS</a>!
     </p>
   </div>
 
