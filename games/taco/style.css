@@ -1,0 +1,84 @@
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    position: relative;
+    color: black;
+    background: white;
+    font-family: "Comic Sans MS";
+    font-size: 100%;
+    font-weight: 400;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hello {
+    color: black;
+}
+
+.text {
+    max-width: 400px;
+    margin-left: -200px;
+    margin-top: -140px;
+    left: 50%;
+    bottom: 20px;
+    position: absolute;
+    text-shadow: 0px 0px 20px white;
+    line-height: 1.2;
+}
+
+.score {
+    position: absolute;
+    margin-left: -150px;
+    width: 300px;
+    top: 0px;
+    right: 50%;
+    left: 50%
+}
+
+#died {
+    color: #bb242d;
+}
+
+#score {
+    color: #cd3085;
+}
+
+#canvas {
+    background-color: #ffbf00;
+}
+
+a {
+    color: #cc00ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding: 0px;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+li:after {
+    content: " |";
+}
+
+li:last-child:after {
+    content: "";
+}
+
+.play {
+    text-align: right;
+}
