@@ -1,6 +1,5 @@
 var c_top = new Image();
 var c_bottom = new Image();
-var score = 0;
 
 function init() {
     canvas = document.getElementById('canvas');
@@ -44,19 +43,18 @@ function draw() {
 
     document.getElementById('score').innerHTML = score;
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-    ctx.drawImage(c_top, window.innerWidth / 2 - top_width / 2, window.innerHeight / 2 - top_height, top_width, top_height);
-    if (direction == 1 && offset > offsetMax) {
-        direction = -direction;
-    } else if (direction == -1 && offset < 0) {
-        direction = -direction;
-    }
-    offset += direction;
-    ctx.drawImage(c_bottom, window.innerWidth / 2 - bottom_width / 2, window.innerHeight / 2 + offset, bottom_width, bottom_height);
 
     for (i = 0; i < taco_list.length; i++) {
         taco_list[i].goTo(ctx, window.innerWidth / 2, window.innerHeight / 2);
     }
-
+    ctx.drawImage(c_top, window.innerWidth / 2 - top_width / 2, window.innerHeight / 2 - top_height, top_width, top_height);
+    if (direction == 1 && offset > offsetMax) {
+        direction = -direction;
+    } else if (direction == -1 && offset < -5) {
+        direction = -direction;
+    }
+    offset += direction;
+    ctx.drawImage(c_bottom, window.innerWidth / 2 - bottom_width / 2, window.innerHeight / 2 + offset, bottom_width, bottom_height);
 
     window.requestAnimationFrame(draw);
 }
