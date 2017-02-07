@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Trump Chase</title>
+    <link rel="icon" href="https://winterstudios.se/wp-content/uploads/2016/03/FAVICON-W.png" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8" />
+</head>
+
+<script src="main.js"></script>
+<script src="person.js"></script>
+<script src="jquery-3.1.1.min.js"></script>
+
+<body onload="init();">
+  <div class="text">
+    <p>
+      <b class="hello">OH HAI!</b>
+      <br />
+      <br />My name is Wei-Wei Wu.
+      <br />
+      <br />I am a 3rd year student at the University of Minnesota, I will be working at <a href="https://www.qualtrics.com" target="blank">Qualtrics</a> this summer.
+      <br />
+      <br />Check me out at the following links:
+    </p>
+    <ul>
+      <li>
+        <a href="https://github.com/hungweiwu" target="blank">github</a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/hungweiwu" target="blank">linkedin</a>
+      </li>
+      <li>
+        <a href="mailto:wuxx1045@umn.edu">email</a>
+      </li>
+]    </ul>
+    <p class='play'>
+      or you can help <a href="#" onclick="$('.text').fadeOut();">BERNIE SURVIVE</a>!
+    </p>
+  </div>
+
+  <div class='score'>
+    <p>
+      BERNIE HAS EATEN:
+      <b id="score"></b>
+       PEOPLE
+    <br />
+      BERNIE HAS DIED:
+      <b id="died" color="rgb(255, 176, 0)"></b>
+      TIMES
+    </p>
+  </div>
+
+
+
+    <canvas id="canvas">
+    </canvas>
+</body>
+
+</html>
