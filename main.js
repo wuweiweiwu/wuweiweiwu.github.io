@@ -174,10 +174,12 @@ function draw() {
 
     if (person_x < window.innerWidth / 2 + person_width / 2 && person_x > window.innerWidth / 2 - person_width / 2 &&
         person_y < window.innerHeight / 2 + person_height / 2 && person_y > window.innerHeight / 2 - person_height / 2) {
-        if (background.current_room == 7 && !app_open){ //bottom
+        if (background.current_room == 7 && !app_open) { //bottom
             //figuring it out
             //document.getElementById('taco').click();
-            window.location.replace("http://theweiweiwu.com/games/taco");
+            //  window.location.replace("http://theweiweiwu.com/games/taco");
+            window.location.href = 'http://theweiweiwu.com/games/taco';
+
             app_open = true;
         }
 
