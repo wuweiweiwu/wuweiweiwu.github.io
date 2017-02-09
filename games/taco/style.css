@@ -44,6 +44,9 @@ body {
 #died {
     color: #bb242d;
 }
+#footer{
+  color: rgb(0, 0, 0);
+}
 
 #score {
     color: #cd3085;

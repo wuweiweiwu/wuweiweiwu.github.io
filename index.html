@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>CHRISTINA CHALUPAS</title>
+    <title>im a nerd</title>
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAACGvWAAA5hAD///8AAMbGABcaHAA/xugAUpzvAIT//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM1AAAzMzMzMwZmZgADMzMwYAIGZmADMzBgEgZmZmADMGAhIGZmZmAwYHcgZmZmZgBgcRBmZmZmAGCBIGZmZmYAYIEgZmZmZgBmAoBmZmZmAGYIQGZmZmYAZmAQZmZmZgMGZgQAZmZmAwZmYABmZmYDMGZmAAZmYDMzAAAzMAADPB/wAAgD8AAAAPAAAAAwAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAMABAADhwwAA"
         rel="icon" type="image/x-icon" />
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -9,19 +9,13 @@
 </head>
 
 <script src="main.js"></script>
-<script src="taco.js"></script>
+<script src="sprites.js"></script>
+<script src="background.js"></script>
 <script src="jquery-3.1.1.min.js"></script>
 
 <body onload="init();">
 
-    <div class='score'>
-        <p>
-            CHRISTINA HAS EATEN:
-            <b id="score"></b> TACOS
-        </p>
-    </div>
-
-    <div class="text">
+    <!-- <div class="text">
         <p>
             <b class="hello">OH HAI!</b>
             <br />
@@ -45,13 +39,18 @@
                 <a href="https://github.com/hungweiwu/hungweiwu.github.io" target="blank">source</a>
             </li>
         </ul>
-        <p style="text-align: right;">
-            ... or you can feed Christina <a href="#" onclick="$('.text').fadeOut();">LOTS OF TACOS</a>!
+        <p>
+          Use the WASD keys to  <a href="#" onclick="$('.text').fadeOut();">EXPLORE</a>! :)
         </p>
-    </div>
+    </div> -->
+    <a href="http://theweiweiwu.com/games/taco" style="visibility: hidden" id="taco" target="_blank"></a>
 
     <canvas id="canvas">
     </canvas>
+
+    <footer id="copyright" >&copy; Copyright 2017 <a href="https://github.com/hungweiwu" target="_blank">hungweiwu</a></footer>
+
 </body>
+
 
 </html>

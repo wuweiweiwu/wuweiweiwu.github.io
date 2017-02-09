@@ -28,34 +28,18 @@ body {
     left: 50%;
     bottom: 20px;
     position: absolute;
-    text-shadow: 0px 0px 20px white;
     line-height: 1.2;
-}
-
-.score {
-    position: absolute;
-    margin-left: -150px;
-    width: 300px;
-    top: 0px;
-    right: 50%;
-    left: 50%
-}
-
-#died {
-    color: #bb242d;
-}
-
-#score {
-    color: #cd3085;
-}
-
-#canvas {
-    background-color: #ffbf00;
 }
 
 a {
     color: #cc00ff;
     text-decoration: none;
+}
+#copyright{
+  color: #f6ed10;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
 }
 
 a:hover {
