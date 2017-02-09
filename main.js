@@ -145,7 +145,7 @@ var top_bound = height_ratio * window.innerHeight;
 var bottom_bound = (1 - height_ratio) * window.innerHeight;
 var dx = 0;
 var dy = 0;
-var app_open = false;
+//var app_open = false;
 
 console.log(right_bound);
 console.log(left_bound);
@@ -174,13 +174,15 @@ function draw() {
 
     if (person_x < window.innerWidth / 2 + person_width / 2 && person_x > window.innerWidth / 2 - person_width / 2 &&
         person_y < window.innerHeight / 2 + person_height / 2 && person_y > window.innerHeight / 2 - person_height / 2) {
-        if (background.current_room == 7 && !app_open) { //bottom
+        if (background.current_room == 7) { //bottom
             //figuring it out
             //document.getElementById('taco').click();
             //  window.location.replace("http://theweiweiwu.com/games/taco");
             window.location.href = 'http://theweiweiwu.com/games/taco';
 
-            app_open = true;
+          //  app_open = true;
+        } else if (background.current_room == 8) {
+            window.location.href = 'http://theweiweiwu.com/games/bernie';
         }
 
     }
@@ -236,7 +238,7 @@ function draw() {
         dx = 0;
         if (background.toRoom(background.current_room - 1, person_x, person_y, person_width, person_height)) {
             person_x = 5 / 6 * window.innerWidth;
-            app_open = false;
+            //  app_open = false;
         }
     }
     //right room
@@ -244,7 +246,7 @@ function draw() {
         dx = 0;
         if (background.toRoom(background.current_room + 1, person_x, person_y, person_width, person_height)) {
             person_x = 1 / 6 * window.innerWidth;
-            app_open = false;
+            //  app_open = false;
 
         }
 
@@ -255,7 +257,7 @@ function draw() {
         console.log("x: " + person_x + " y: " + person_y);
         if (background.toRoom(background.current_room + 3, person_x, person_y, person_width, person_height)) {
             person_y = 1 / 4 * window.innerHeight;
-            app_open = false;
+            //  app_open = false;
 
         }
     }
@@ -264,7 +266,7 @@ function draw() {
         dy = 0;
         if (background.toRoom(background.current_room - 3, person_x, person_y, person_width, person_height)) {
             person_y = 3 / 4 * window.innerHeight;
-            app_open = false;
+            //    app_open = false;
 
         }
     }

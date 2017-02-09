@@ -148,6 +148,6 @@ function updateCanvas() {
     window.requestAnimationFrame(updateCanvas);
 }
 function updateScore(){
-  document.getElementById('score').innerHTML = score;
-  document.getElementById('died').innerHTML = died;
+  // document.getElementById('score').innerHTML = score;
+  // document.getElementById('died').innerHTML = died;
 }

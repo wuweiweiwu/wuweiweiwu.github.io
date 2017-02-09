@@ -37,6 +37,23 @@ body {
 #score{
   color: #34cd30;
 }
+#info{
+  color: #ba5252;
+  position: absolute;
+  bottom: 10px;
+  font-size: 20px;
+  width: 700px;
+  left: 50%;
+  margin-left: -350px;
+  font-weight: bold;
+  text-align: center;
+}
+#copyright{
+  color: #039d05;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
 a {
   color: #0040ff;
   text-decoration: none;
@@ -59,4 +76,7 @@ li:last-child:after {
 }
 .play {
   text-align: right;
+}
+#canvas{
+  background-color: #edd6f2
 }
