@@ -178,11 +178,11 @@ function draw() {
             //figuring it out
             //document.getElementById('taco').click();
             //  window.location.replace("http://theweiweiwu.com/games/taco");
-            window.location.href = 'http://theweiweiwu.com/games/taco';
+            window.location = 'http://theweiweiwu.com/games/taco';
 
           //  app_open = true;
         } else if (background.current_room == 8) {
-            window.location.href = 'http://theweiweiwu.com/games/bernie';
+            window.location = 'http://theweiweiwu.com/games/bernie';
         }
 
     }
