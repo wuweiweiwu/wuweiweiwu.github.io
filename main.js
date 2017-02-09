@@ -185,13 +185,18 @@ function draw() {
 
         switch (background.current_room) {
             case 0:
-                window.location.href='https://github.com/hungweiwu';
+                window.location.href = 'https://github.com/hungweiwu';
+                app_open = true;
                 break;
             case 2:
-                window.location.href='https://linkedin.com/in/hungweiwu';
+                window.location.href = 'https://linkedin.com/in/hungweiwu';
+                app_open = true;
+
                 break;
             case 3:
-                window.location.href='http://theweiweiwu.com/transcript.pdf';
+                window.location.href = 'http://theweiweiwu.com/transcript.pdf';
+                app_open = true;
+
                 break;
             case 5:
 
@@ -200,10 +205,14 @@ function draw() {
 
                 break;
             case 7:
-                window.location.href='http://theweiweiwu.com/games/taco';
+                window.location.href = 'http://theweiweiwu.com/games/taco';
+                app_open = true;
+
                 break;
             case 8:
-                window.location.href='http://theweiweiwu.com/games/bernie';
+                window.location.href = 'http://theweiweiwu.com/games/bernie';
+                app_open = true;
+
                 break;
         }
 
