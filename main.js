@@ -170,19 +170,23 @@ function outOfBounds(direction) {
     return false;
 }
 
+//so dont repeatly try to redirect
+var app_open = false;
+
 function draw() {
 
     if (person_x < window.innerWidth / 2 + person_width / 2 && person_x > window.innerWidth / 2 - person_width / 2 &&
         person_y < window.innerHeight / 2 + person_height / 2 && person_y > window.innerHeight / 2 - person_height / 2) {
-        if (background.current_room == 7) { //bottom
+        if (background.current_room == 7 && !app_open) { //bottom
             //figuring it out
             //document.getElementById('taco').click();
             //  window.location.replace("http://theweiweiwu.com/games/taco");
-            window.location = 'http://theweiweiwu.com/games/taco';
-
+            window.location.href = 'http://theweiweiwu.com/games/taco';
+            app_open = true;
           //  app_open = true;
-        } else if (background.current_room == 8) {
-            window.location = 'http://theweiweiwu.com/games/bernie';
+        } else if (background.current_room == 8 && !app_open) {
+            window.location.href = 'http://theweiweiwu.com/games/bernie';
+            app_open = true;
         }
 
     }
