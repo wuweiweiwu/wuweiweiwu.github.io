@@ -175,19 +175,38 @@ var app_open = false;
 
 function draw() {
 
+    if (background.current_room != 1) {
+        document.getElementById('text').style.visibility = "hidden";
+    }
+
     if (person_x < window.innerWidth / 2 + person_width / 2 && person_x > window.innerWidth / 2 - person_width / 2 &&
-        person_y < window.innerHeight / 2 + person_height / 2 && person_y > window.innerHeight / 2 - person_height / 2) {
-        if (background.current_room == 7 && !app_open) { //bottom
-            //figuring it out
-            //document.getElementById('taco').click();
-            //  window.location.replace("http://theweiweiwu.com/games/taco");
-            window.location.href = 'http://theweiweiwu.com/games/taco';
-            app_open = true;
-          //  app_open = true;
-        } else if (background.current_room == 8 && !app_open) {
-            window.location.href = 'http://theweiweiwu.com/games/bernie';
-            app_open = true;
+        person_y < window.innerHeight / 2 + person_height / 2 && person_y > window.innerHeight / 2 - person_height / 2 &&
+        !app_open) {
+
+        switch (background.current_room) {
+            case 0:
+                window.location.href='https://github.com/hungweiwu';
+                break;
+            case 2:
+                window.location.href='https://linkedin.com/in/hungweiwu';
+                break;
+            case 3:
+                window.location.href='http://theweiweiwu.com/transcript.pdf';
+                break;
+            case 5:
+
+                break;
+            case 6:
+
+                break;
+            case 7:
+                window.location.href='http://theweiweiwu.com/games/taco';
+                break;
+            case 8:
+                window.location.href='http://theweiweiwu.com/games/bernie';
+                break;
         }
+
 
     }
 
@@ -280,6 +299,11 @@ function draw() {
         person_x += dx;
         person_y += dy;
         sprites.draw(ctx, person_x, person_y);
+
+
+        if (background.current_room == 1) {
+            document.getElementById('text').style.visibility = "visible";
+        }
     }
 
     // background.draw(ctx);

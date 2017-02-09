@@ -22,17 +22,21 @@ body {
 }
 
 .text {
-    max-width: 400px;
-    margin-left: -200px;
-    margin-top: -140px;
+    max-width: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+    top: 50%;
     left: 50%;
-    bottom: 20px;
     position: absolute;
     line-height: 1.2;
-}
+    color: #ffd500;
+    font-size: 25px;
+    visibility: hidden;
+    /*text-shadow: 1px 1px #2a2f0d;*/
+  }
 
 a {
-    color: #cc00ff;
+    color: #00fff0;
     text-decoration: none;
 }
 #copyright{
