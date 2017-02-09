@@ -44,8 +44,11 @@ body {
 #died {
     color: #bb242d;
 }
-#footer{
-  color: rgb(0, 0, 0);
+#copyright{
+  color: #000000;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
 }
 
 #score {
