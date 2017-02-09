@@ -41,8 +41,15 @@ body {
     left: 50%
 }
 
-#died {
-    color: #bb242d;
+#info{
+  color: #544401;
+  position: absolute;
+  bottom: 10px;
+  font-size: 20px;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+  font-weight: bold;
 }
 #copyright{
   color: #000000;
