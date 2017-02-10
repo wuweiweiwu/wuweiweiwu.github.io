@@ -108,7 +108,7 @@ function init() {
     window.addEventListener("click", function(event) {
         if (rooms_icons[background.current_room]) {
             for (i = 0; i < rooms_icons[background.current_room].length; i++) {
-                rooms_icons.click(event.clienX, event.clientY);
+                rooms_icons[background.current_room][i].click(event.clientX, event.clientY);
             }
         }
     });
