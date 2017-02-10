@@ -54,6 +54,11 @@ body {
   left: 0px;
   bottom: 0px;
 }
+#counter{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
 a {
   color: #0040ff;
   text-decoration: none;

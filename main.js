@@ -27,6 +27,26 @@ function init() {
 
     background = new Background('img/all_rooms.png', all_room_width, all_room_height, room_per_row, room_per_column);
 
+    //drawing icons
+    rooms_icons = [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+    ];
+    var taco = new Icon('img/taco.png', window.innerWidth / 3, window.innerHeight / 2, 566, 393, 'http://theweiweiwu.com/games/taco', 'img/taco_title.png', 287, 25);
+    var bernie = new Icon('img/trump.png', window.innerWidth * 2 / 3, window.innerHeight / 2, 427, 547, 'http://theweiweiwu.com/games/bernie', 'img/trump_title.png', 132, 25);
+    rooms_icons[7] = [taco, bernie];
+
+    var minecraft = new Icon('img/minecraft.png', window.innerWidth / 3, window.innerHeight / 2, 256, 256, 'https://github.com/hungweiwu/minecraft-virus-mod', 'img/minecraft_title.png', 220, 25);
+    var macbot = new Icon('img/macbot.png', window.innerWidth / 2, window.innerHeight / 2, 512, 512, 'https://github.com/hungweiwu/MacBotV1', 'img/macbot_title.png', 113, 24);
+    var zookeeper = new Icon('img/zookeeper.gif', window.innerWidth * 2 / 3, window.innerHeight / 2, 300, 308, 'https://github.com/hungweiwu/zookeeper-bot', 'img/zookeeper_title.png', 205, 25);
+    rooms_icons[3] = [minecraft, macbot, zookeeper];
+
     Directions = {
         LEFT: 0,
         RIGHT: 1,
@@ -145,7 +165,6 @@ var top_bound = height_ratio * window.innerHeight;
 var bottom_bound = (1 - height_ratio) * window.innerHeight;
 var dx = 0;
 var dy = 0;
-//var app_open = false;
 
 console.log(right_bound);
 console.log(left_bound);
@@ -170,56 +189,33 @@ function outOfBounds(direction) {
     return false;
 }
 
-//so dont repeatly try to redirect
-var app_open = false;
+//drawing icons
+function drawIcon(room) {
+    for (i = 0; i < rooms_icons[room].length; i++) {
+        rooms_icons[room][i].draw(ctx);
+    }
+}
+
+//stepping on icons
+function onIcon(room) {
+    for (i = 0; i < rooms_icons[room].length; i++) {
+        rooms_icons[room][i].goTo(person_x, person_y, person_width, person_height);
+    }
+}
+
+
+
 
 function draw() {
+
+    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
     if (background.current_room != 1) {
         document.getElementById('text').style.visibility = "hidden";
     }
 
-    if (person_x < window.innerWidth / 2 + person_width / 2 && person_x > window.innerWidth / 2 - person_width / 2 &&
-        person_y < window.innerHeight / 2 + person_height / 2 && person_y > window.innerHeight / 2 - person_height / 2 &&
-        !app_open) {
-
-        switch (background.current_room) {
-            case 0:
-                window.location.href = 'https://github.com/hungweiwu';
-                app_open = true;
-                break;
-            case 2:
-                window.location.href = 'https://linkedin.com/in/hungweiwu';
-                app_open = true;
-
-                break;
-            case 3:
-                window.location.href = 'http://theweiweiwu.com/transcript.pdf';
-                app_open = true;
-
-                break;
-            case 5:
-
-                break;
-            case 6:
-
-                break;
-            case 7:
-                window.location.href = 'http://theweiweiwu.com/games/taco';
-                app_open = true;
-
-                break;
-            case 8:
-                window.location.href = 'http://theweiweiwu.com/games/bernie';
-                app_open = true;
-
-                break;
-        }
-
-
-    }
-
-    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    //check if on icon
+    onIcon(background.current_room);
 
     dx = 0;
     dy = 0;
@@ -305,17 +301,17 @@ function draw() {
 
     //dont draw sprite until background is done updating
     if (background.draw(ctx)) {
+        drawIcon(background.current_room);
+
         person_x += dx;
         person_y += dy;
         sprites.draw(ctx, person_x, person_y);
-
 
         if (background.current_room == 1) {
             document.getElementById('text').style.visibility = "visible";
         }
     }
 
-    // background.draw(ctx);
 
     window.requestAnimationFrame(draw);
 }

@@ -31,7 +31,11 @@ body {
     text-shadow: 0px 0px 20px white;
     line-height: 1.2;
 }
-
+#counter{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
 .score {
     position: absolute;
     margin-left: -150px;

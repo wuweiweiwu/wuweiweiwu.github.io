@@ -45,6 +45,11 @@ a {
   left: 0px;
   bottom: 0px;
 }
+#counter{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
 
 a:hover {
     text-decoration: underline;
