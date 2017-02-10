@@ -106,12 +106,26 @@ function init() {
 
     //you can click the icon too!
     window.addEventListener("click", function(event) {
-        if (rooms_icons[background.current_room]) {
-            for (i = 0; i < rooms_icons[background.current_room].length; i++) {
-                rooms_icons[background.current_room][i].click(event.clientX, event.clientY);
-            }
+        //  if (rooms_icons[background.current_room]) {
+        for (i = 0; i < rooms_icons[background.current_room].length; i++) {
+            rooms_icons[background.current_room][i].click(event.clientX, event.clientY);
         }
+        //  }
     });
+
+    //highlight the icons when you mouse over them
+    // canvas.addEventListener('mousemove', function(event) {
+    //     //  var mousePos = getMousePos(event);
+    //     //  var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+    //     //writeMessage(canvas, message);
+    //     console.log("x:" + event.clientX + " y:" + event.clientY);
+    //
+    //     //  if (rooms_icons[background.current_room]) {
+    //     for (i = 0; i < rooms_icons[background.current_room].length; i++) {
+    //         rooms_icons[background.current_room][i].mouseOver(ctx, event.clientX, event.clientY);
+    //     }
+    //     //  }
+    // }, false);
 
     window.addEventListener("keyup", function(event) {
         var keyCode = event.keyCode;
@@ -196,20 +210,20 @@ function outOfBounds(direction) {
 
 //drawing icons
 function drawIcon(room) {
-    if (rooms_icons[room]) {
-        for (i = 0; i < rooms_icons[room].length; i++) {
-            rooms_icons[room][i].draw(ctx);
-        }
+    //  if (rooms_icons[room]) {
+    for (i = 0; i < rooms_icons[room].length; i++) {
+        rooms_icons[room][i].draw(ctx);
     }
+    //  }
 }
 
 //stepping on icons
 function onIcon(room) {
-    if (rooms_icons[room]) {
-        for (i = 0; i < rooms_icons[room].length; i++) {
-            rooms_icons[room][i].goTo(person_x, person_y, person_width, person_height);
-        }
+    //if (rooms_icons[room]) {
+    for (i = 0; i < rooms_icons[room].length; i++) {
+        rooms_icons[room][i].goTo(person_x, person_y, person_width, person_height);
     }
+    //}
 }
 
 
