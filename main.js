@@ -36,6 +36,7 @@ function init() {
         [],
         [],
         [],
+        [],
         []
     ];
     var taco = new Icon('img/taco.png', window.innerWidth / 3, window.innerHeight / 2, 566, 393, 'http://theweiweiwu.com/games/taco', 'img/taco_title.png', 287, 25);
@@ -106,11 +107,11 @@ function init() {
 
     //you can click the icon too!
     window.addEventListener("click", function(event) {
-        if (rooms_icons[background.current_room]) {
-            for (i = 0; i < rooms_icons[background.current_room].length; i++) {
-                rooms_icons[background.current_room][i].click(event.clientX, event.clientY);
-            }
+        //  if (rooms_icons[background.current_room]) {
+        for (i = 0; i < rooms_icons[background.current_room].length; i++) {
+            rooms_icons[background.current_room][i].click(event.clientX, event.clientY);
         }
+        //  }
     });
 
     //highlight the icons when you mouse over them
@@ -210,20 +211,20 @@ function outOfBounds(direction) {
 
 //drawing icons
 function drawIcon(room) {
-    if (rooms_icons[room]) {
-        for (i = 0; i < rooms_icons[room].length; i++) {
-            rooms_icons[room][i].draw(ctx);
-        }
+    //  if (rooms_icons[room]) {
+    for (i = 0; i < rooms_icons[room].length; i++) {
+        rooms_icons[room][i].draw(ctx);
     }
+    //  }
 }
 
 //stepping on icons
 function onIcon(room) {
-    if (rooms_icons[room]) {
-        for (i = 0; i < rooms_icons[room].length; i++) {
-            rooms_icons[room][i].goTo(person_x, person_y, person_width, person_height);
-        }
+    //if (rooms_icons[room]) {
+    for (i = 0; i < rooms_icons[room].length; i++) {
+        rooms_icons[room][i].goTo(person_x, person_y, person_width, person_height);
     }
+    //}
 }
 
 
