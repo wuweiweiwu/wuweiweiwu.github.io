@@ -37,3 +37,8 @@ Icon.prototype.goTo = function(x, y, w, h) {
         this.isOpened = true;
     }
 }
+Icon.prototype.click = function(x, y) {
+    if (x < this.x + this.icon_width / 2 && x > this.x - this.icon_width / 2 && y < this.y + this.icon_height / 2 && this.y - this.icon_height / 2) {
+        window.location.href = this.target;
+    }
+}
