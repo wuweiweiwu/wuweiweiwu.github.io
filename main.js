@@ -27,7 +27,7 @@ function init() {
 
     background = new Background('img/all_rooms.png', all_room_width, all_room_height, room_per_row, room_per_column);
 
-    portal = new Portal('img/portal.png', [0, 2, 8, 6], window.innerWidth / 3, window.innerWidth / 3);
+    portal = new Portal('img/portal.png', [0, 2, 5, 8, 6], window.innerWidth / 3, window.innerWidth / 3);
 
     //drawing icons
     rooms_icons = [
