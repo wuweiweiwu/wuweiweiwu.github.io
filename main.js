@@ -27,6 +27,8 @@ function init() {
 
     background = new Background('img/all_rooms.png', all_room_width, all_room_height, room_per_row, room_per_column);
 
+    portal = new Portal('img/portal.png', [0, 2, 8, 6], window.innerWidth / 3, window.innerWidth / 3);
+
     //drawing icons
     rooms_icons = [
         [],
@@ -326,6 +328,7 @@ function draw() {
     //dont draw sprite until background is done updating
     if (background.draw(ctx)) {
         drawIcon(background.current_room);
+        portal.draw(ctx, background.current_room);
 
         person_x += dx;
         person_y += dy;

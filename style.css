@@ -6,7 +6,7 @@ body {
     position: relative;
     color: black;
     background: white;
-    font-family: "Comic Sans MS";
+    font-family: "arial";
     font-size: 100%;
     font-weight: 400;
     -webkit-touch-callout: none;
@@ -29,7 +29,7 @@ body {
     left: 50%;
     position: absolute;
     line-height: 1.2;
-    color: #ffd500;
+    color: #bdaaff;
     font-size: 25px;
     visibility: hidden;
     /*text-shadow: 1px 1px #2a2f0d;*/
