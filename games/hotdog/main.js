@@ -32,43 +32,52 @@ function init() {
     tail = new Segment('img/end.png', segment, segment.leadx, segment.leady, end_width, end_height, 3);
 
     food = new Food();
+
+    prev_seg_score = 0;
     window.requestAnimationFrame(draw);
 }
 
-function intersect(p, f){
-    return (p.x - p.width/2 < f.x && p.x + p.width/2 > f.x && p.y - p.height/2 < f.y && p.y + p.height/2 > f.y);
+function intersect(p, f) {
+    return (p.x - p.width / 2 < f.x && p.x + p.width / 2 > f.x && p.y - p.height / 2 < f.y && p.y + p.height / 2 > f.y);
 }
 
-function addScore(){
-  var score = parseInt(document.getElementById('score').innerHTML);
-  score++;
-  document.getElementById('score').innerHTML = score;
+function addScore() {
+    var score = parseInt(document.getElementById('score').innerHTML);
+    score++;
+    document.getElementById('score').innerHTML = score;
 }
 
-function getScore(){
-    return parseInt(document.getElementById('score').innerHTML);
+function getScore() {
+    var score = parseInt(document.getElementById('score').innerHTML);
+    if (score == 0) return 1;
+    else return score;
 }
 
-function addSegment(){
-  lastSeg = segment_list[segment_list.length - 1];
-  newSeg = new Segment('img/middle.png', lastSeg, lastSeg.leadx, lastSeg.leady, segment_width, segment_height, 3);
-  segment_list.push(newSeg);
-  tail.prev = newSeg;
+function addSegment() {
+    lastSeg = segment_list[segment_list.length - 1];
+    newSeg = new Segment('img/middle.png', lastSeg, lastSeg.leadx, lastSeg.leady, segment_width, segment_height, 3);
+    segment_list.push(newSeg);
+    tail.prev = newSeg;
 }
 
 function draw() {
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
-    if (intersect(head,food)){
-      addScore();
-      food = new Food();
+    if (intersect(head, food)) {
+        addScore();
+        food = new Food();
+    }
+
+    if (getScore() % 2 == 0 && getScore() > prev_seg_score) {
+        addSegment();
+        prev_seg_score = getScore();
     }
 
     head.update(mouseX, mouseY);
     head.draw(ctx);
-    for(i=0;i<segment_list.length;i++){
-      segment_list[i].update();
-      segment_list[i].draw(ctx);
+    for (i = 0; i < segment_list.length; i++) {
+        segment_list[i].update();
+        segment_list[i].draw(ctx);
     }
     tail.update();
     tail.draw(ctx);
