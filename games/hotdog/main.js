@@ -30,14 +30,39 @@ function init() {
     segment = new Segment('img/middle.png', head, head.leadx, head.leady, segment_width, segment_height, 3);
     segment_list.push(segment);
     tail = new Segment('img/end.png', segment, segment.leadx, segment.leady, end_width, end_height, 3);
+
+    food = new Food();
     window.requestAnimationFrame(draw);
-
-
 }
 
+function intersect(p, f){
+    return (p.x - p.width/2 < f.x && p.x + p.width/2 > f.x && p.y - p.height/2 < f.y && p.y + p.height/2 > f.y);
+}
+
+function addScore(){
+  var score = parseInt(document.getElementById('score').innerHTML);
+  score++;
+  document.getElementById('score').innerHTML = score;
+}
+
+function getScore(){
+    return parseInt(document.getElementById('score').innerHTML);
+}
+
+function addSegment(){
+  lastSeg = segment_list[segment_list.length - 1];
+  newSeg = new Segment('img/middle.png', lastSeg, lastSeg.leadx, lastSeg.leady, segment_width, segment_height, 3);
+  segment_list.push(newSeg);
+  tail.prev = newSeg;
+}
 
 function draw() {
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+    if (intersect(head,food)){
+      addScore();
+      food = new Food();
+    }
 
     head.update(mouseX, mouseY);
     head.draw(ctx);
@@ -47,6 +72,8 @@ function draw() {
     }
     tail.update();
     tail.draw(ctx);
+
+    food.draw(ctx);
 
     window.requestAnimationFrame(draw);
 }
