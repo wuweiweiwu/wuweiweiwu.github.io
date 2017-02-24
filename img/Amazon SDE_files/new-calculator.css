@@ -1,0 +1,158 @@
+<style>
+@charset "utf-8";
+   .calculator-div .mainContainer {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        padding-top: 5%;
+        display: none;
+    }
+    
+    .calculator-div .calculator {
+        width: 240px;
+        padding: 10px;
+        height: auto;
+        margin: 3% auto !important; 
+        background: #fff;
+    }
+    
+    .calculator-div #display {
+        width: 92%;
+        height: 54px;
+        margin: 7px 0px 14px 3px;
+        padding-right: 9px;
+        background: #c7c6c6;
+        text-align: right;
+        border-radius: 6px;
+        border: 1px solid #6B6B6B;
+        font-size: 26px;
+        font: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        -moz-box-shadow: inset 0 0 10px #333, inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+        -webkit-box-shadow: inset 0 0 10px #333, inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+        box-shadow: inset 0 0 10px #333, inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+    }
+    
+    .calculator-div #display:focus {
+        outline: none;
+    }
+    
+    .calculator-div .btnNum {
+        width: 220px;
+        margin: 12px;
+    }
+    
+    .calculator-div .btnNum,
+    .calculator-div .btnTop,
+    .calculator-div .btnMath,
+    .calculator-div .btnOpps {
+        width: 40px;
+        height: 40px;
+        padding: 0 !important;
+        margin: 0px 0px 10px 3px !important;
+        border: 1px solid #333 ;
+        border-radius: 6px;
+        color: #CCC;
+        font: 20px "Trebuchet MS", Arial, Helvetica, sans-serif;
+        line-height: 45px;
+        -moz-box-shadow: inset 0 0 10px #666, inset 0px 1px #BCD6FF, 0 1px 1px #323643;
+        -webkit-box-shadow: inset 0 0 10px #666, inset 0px 1px #BCD6FF, 0 1px 1px #323643;
+        box-shadow: inset 0 0 10px #666, inset 0px 1px #BCD6FF, 0 1px 1px #323643;
+        background: #333;
+    }
+    
+    .calculator-div .btnNum:active {
+        color: #FFF;
+        border: 1px solid #333;
+        -moz-box-shadow: inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+        -webkit-box-shadow: inset 0 1px 1px #000, 0px 1px #E6E6E6;
+        box-shadow: inset 0 1px 1px #000, 0px 1px #E6E6E6;
+    }
+    
+    .calculator-div .btnTop {
+        background-color: #d02200;
+        border: 1px solid #d02200;
+        -moz-box-shadow: inset 0 0 10px #F63, inset 0px 1px #BCD6FF, 0 1px 1px #323643;
+        -webkit-box-shadow: inset 0 0 10px #F63, inset 0px 1px #BCD6FF, 0 1px 1px #323643;
+        box-shadow: inset 0 0 10px #F63, inset 0px 1px #BCD6FF, 0 1px 1px #323643;
+    }
+    
+    .calculator-div .btnTop:active {
+        border: 1px solid #d02200;
+        -moz-box-shadow: inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+        -webkit-box-shadow: inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+        box-shadow: inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+    }
+    
+    .calculator-div .btnTop:active {
+        border: 1px solid #039;
+        -moz-box-shadow: inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+        -webkit-box-shadow: inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+        box-shadow: inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+    }
+    
+    .calculator-div .btnMath,
+    .calculator-div .btnOpps {
+        background-color: #036;
+        border: 1px solid #036;
+        -moz-box-shadow: inset 0 0 10px #069, inset 0px 1px #BCD6FF, 0 1px 1px #323643;
+        -webkit-box-shadow: inset 0 0 10px #069, inset 0px 1px #BCD6FF, 0 1px 1px #323643;
+        box-shadow: inset 0 0 10px #069, inset 0px 1px #BCD6FF, 0 1px 1px #323643;
+    }
+    
+    .calculator-div .btnMath:active,
+    .calculator-div .btnOpps:active {
+        border: 1px solid #039;
+        -moz-box-shadow: inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+        -webkit-box-shadow: inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+        box-shadow: inset 0 1px 1px #0A0B0D, 0px 1px #E6E6E6;
+    }
+    
+    .calculator-div #panelCal {
+        width: 257px;
+        height: 440px;
+        border: 1px solid #ccc !important;
+        border-radius: 4px 4px 24px 24px !important;
+        position: relative;
+        border-radius: round;
+        background: white !important; 
+        margin: 0 auto !important;
+        /* top: 13%;
+            left: 0px;
+            right: 0px;*/
+        display: none;
+        overflow: hidden;
+        border-radius: 0px 0px 20px 20px;
+        -moz-box-shadow: 7px 21px 53px -8px rgba(0, 0, 0, 0.45);
+        -webkit-box-shadow: 7px 21px 53px -8px rgba(0, 0, 0, 0.45);
+        box-shadow: 7px 21px 53px -8px rgba(0, 0, 0, 0.45);
+    }
+    
+    .calculator-div .headerPanel {
+        font-family: sans-serif;
+        background: #456b9b;
+        color: #fff;
+        padding: 10px 10px 10px 10px;
+        cursor: move;
+    }
+    
+    .calculator-div .cross_button {
+        width: 25px;
+        height: 13px;
+        text-align: center;
+        padding: 12px;
+        /* padding: 0px; */
+        display: inline;
+        top: 0px;
+        cursor: pointer;
+        right: 0px;
+        /* float: right; */
+        position: absolute;
+        background: #2a5b9a;
+        /* border: 1px solid #28476f; */
+    }
+    
+    .calculator-div .cross_button:hover {
+        background: #385e8e;
+    }
+}
+</style>

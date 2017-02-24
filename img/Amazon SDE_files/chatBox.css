@@ -1,0 +1,123 @@
+.spanChatHeaderTextWrapper{
+    font-weight: bolder;
+    float:left;
+    width: 90%;
+    overflow: hidden;
+}
+.spanChatBox
+{
+position: fixed;
+bottom: 0;
+right: 0;
+float : right;
+width : 230px;
+border : 1px solid #000000;
+margin-right : 2px;
+background-color: #E0E0E0;
+
+}
+.divChatBoxHeader
+{
+height : 20px;
+border-bottom: 1px solid #000000;
+border-radius : 10px 10px 0 0;
+cursor: pointer;
+padding: 3px;
+float: right;
+width: 97%;
+}
+.shadow
+{
+-moz-box-shadow: 3px 3px 5px 6px #ccc;
+-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+box-shadow: 3px 3px 5px 6px #ccc;
+}
+.divChatBoxBody
+{
+height : 230px;
+padding-left : 5px;
+overflow : auto;
+}
+.divChatBoxText
+{
+width : 97%;
+height : 30px;
+margin-left: 2px;
+}
+.divMsg
+{
+clear: both;
+height : auto;
+font-size : 14px;
+}
+
+.spanChatClose
+{
+float: left;
+}
+.spanChatClose:hover
+{
+color : #888;
+}
+.inpChatText
+{
+width : 90%;
+}
+.chatInputBoxDiv{
+    float:left;
+    width:90%;
+}
+.btnChatSend
+{
+    width: 10px;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    float: left;
+    margin-top: 3px;
+}
+.enable{
+    border-left: 9px solid rgb(5, 5, 5);    
+    cursor: pointer;
+}
+.disabled{
+    border-left: 9px solid rgb(126, 119, 119);    
+    cursor: wait;
+}
+
+.isModerator
+{
+float : left;
+color : #F00;
+}
+.isCandidate
+{
+float : left;
+color : #333333;
+}
+.isError
+{
+color : #FF0000
+}
+.roundCorners
+{
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px; /* future proofing */
+-khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+.spanStatusMsg
+{
+position: relative;
+top: -120px;
+right: 0px;
+width: auto;
+height: auto;
+}
+.divChatSentStatus
+{
+	//visibility : hidden;
+	height	: 16px;
+	overflow : hidden;
+        opacity : 1;
+}
