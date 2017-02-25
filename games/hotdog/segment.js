@@ -15,14 +15,48 @@ function Segment(src, prev, x, y, w, h, speed) {
     this.leadx = this.x + 50;
     this.leady = this.y;
     this.leadlength = 50;
-    this.error = 30;
+    this.error = 20;
+
+
+    //head movement
+    this.offset = 0;
+    this.direction = 1;
 }
 Segment.prototype.draw = function(ctx) {
 
     ctx.save();
-    ctx.translate(this.x,this.y);
-    ctx.rotate(this.rotation);
-    ctx.drawImage(this.img, - this.width / 2,- this.height / 2, this.width, this.height);
+
+    if (this.prev == null) {
+
+        var parts_width = 161;
+        var parts_height = 258;
+
+        var top = new Image();
+        var bottom = new Image();
+        top.src = 'img/top.png';
+        bottom.src = 'img/bottom.png';
+
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+
+        ctx.drawImage(top, -parts_width / 2, -parts_height / 2, parts_width, parts_height);
+        ctx.drawImage(bottom, -parts_width / 2, -parts_height / 2 + this.offset, parts_width, parts_height);
+
+        if (this.direction == 1 && this.offset > 20) {
+            this.direction = -this.direction;
+        } else if (this.direction == -1 && this.offset < -5) {
+            this.direction = -this.direction;
+        }
+        this.offset += this.direction;
+
+
+    } else {
+
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.drawImage(this.img, -this.width / 2, -this.height / 2, this.width, this.height);
+
+    }
     ctx.restore();
 
     px = this.leadlength * Math.cos(this.rotation);
@@ -31,10 +65,10 @@ Segment.prototype.draw = function(ctx) {
     this.leadx = this.x + px;
     this.leady = this.y + py;
 
-    ctx.beginPath();
-    ctx.moveTo(this.x,this.y);
-    ctx.lineTo(this.leadx,this.leady);
-    ctx.stroke();
+    // ctx.beginPath();
+    // ctx.moveTo(this.x,this.y);
+    // ctx.lineTo(this.leadx,this.leady);
+    // ctx.stroke();
 }
 //update x y towards the previous segments location
 Segment.prototype.update = function(x, y) {
@@ -50,9 +84,9 @@ Segment.prototype.update = function(x, y) {
     var diffy = this.y - targY;
 
     var rotationRadian = Math.atan2(diffy, diffx);
-    rotationRadian += rotationRadian < 0 ? 2*Math.PI : 0;
-    var rotationDegree = rotationRadian*(180/Math.PI);
-  //  rotationDegree += rotationDegree < 0 ? 360 : 0;
+    rotationRadian += rotationRadian < 0 ? 2 * Math.PI : 0;
+    var rotationDegree = rotationRadian * (180 / Math.PI);
+    //  rotationDegree += rotationDegree < 0 ? 360 : 0;
     // console.log("radian: "+rotationRadian);
     // console.log("angle: "+rotationDegree);
 

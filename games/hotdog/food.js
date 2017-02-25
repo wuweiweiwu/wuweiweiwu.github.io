@@ -1,9 +1,11 @@
-function Food(){
+function Food(src,w,h){
+    this.img = new Image();
+    this.img.src = src;
     this.x = Math.random()*window.innerWidth;
     this.y = Math.random()*window.innerHeight;
-    this.width =10;
-    this.height = 10;
+    this.width =w;
+    this.height =h;
 }
 Food.prototype.draw = function(ctx){
-  ctx.fillRect(this.x-this.width/2,this.y-this.height/2, this.width,this.height);
+  ctx.drawImage(this.img, this.x-this.width/2,this.y-this.height/2, this.width,this.height);
 }

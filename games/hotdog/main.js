@@ -31,7 +31,9 @@ function init() {
     segment_list.push(segment);
     tail = new Segment('img/end.png', segment, segment.leadx, segment.leady, end_width, end_height, 3);
 
-    food = new Food();
+    food_width = 139;
+    food_height = 98;
+    food = new Food('img/food.png',food_width, food_height);
 
     prev_seg_score = 0;
     window.requestAnimationFrame(draw);
@@ -65,7 +67,7 @@ function draw() {
 
     if (intersect(head, food)) {
         addScore();
-        food = new Food();
+        food = new Food('img/food.png',food_width, food_height);
     }
 
     if (getScore() % 2 == 0 && getScore() > prev_seg_score) {
