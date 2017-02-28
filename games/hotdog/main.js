@@ -26,10 +26,10 @@ function init() {
 
     segment_list = [];
 
-    head = new Segment('img/head.png', null, window.innerWidth / 2, window.innerHeight / 2, head_width, head_height, 3);
-    segment = new Segment('img/middle.png', head, head.leadx, head.leady, segment_width, segment_height, 3);
+    head = new Segment('img/head.png', null, window.innerWidth / 2, window.innerHeight / 2, head_width, head_height, 4);
+    segment = new Segment('img/middle.png', head, head.leadx, head.leady, segment_width, segment_height, 4);
     segment_list.push(segment);
-    tail = new Segment('img/end.png', segment, segment.leadx, segment.leady, end_width, end_height, 3);
+    tail = new Segment('img/end.png', segment, segment.leadx, segment.leady, end_width, end_height, 4);
 
     food_width = 139;
     food_height = 98;
@@ -57,7 +57,7 @@ function getScore() {
 
 function addSegment() {
     lastSeg = segment_list[segment_list.length - 1];
-    newSeg = new Segment('img/middle.png', lastSeg, lastSeg.leadx, lastSeg.leady, segment_width, segment_height, 3);
+    newSeg = new Segment('img/middle.png', lastSeg, lastSeg.leadx, lastSeg.leady, segment_width, segment_height, 4);
     segment_list.push(newSeg);
     tail.prev = newSeg;
 }

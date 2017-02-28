@@ -41,13 +41,14 @@ function init() {
         [],
         []
     ];
-    var taco = new Icon('img/taco.png', window.innerWidth / 3, window.innerHeight / 2, 566, 393, 'http://theweiweiwu.com/games/taco', 'img/taco_title.png', 287, 25);
-    var bernie = new Icon('img/trump.png', window.innerWidth * 2 / 3, window.innerHeight / 2, 427, 547, 'http://theweiweiwu.com/games/bernie', 'img/trump_title.png', 132, 25);
-    rooms_icons[7] = [taco, bernie];
+    var taco = new Icon('img/taco.png', window.innerWidth / 4, window.innerHeight / 2, 566, 393, 'http://theweiweiwu.com/games/taco', 'img/taco_title.png', 287, 25);
+    var bernie = new Icon('img/trump.png', window.innerWidth * 3 / 4, window.innerHeight / 2, 427, 547, 'http://theweiweiwu.com/games/bernie', 'img/trump_title.png', 132, 25);
+    var hotdog = new Icon('games/hotdog/img/head.png', window.innerWidth / 2, window.innerHeight / 2, 161, 258, 'http://theweiweiwu.com/games/hotdog', 'games/hotdog/img/karie_title.png', 183, 25);
+    rooms_icons[7] = [taco, bernie, hotdog];
 
-    var minecraft = new Icon('img/minecraft.png', window.innerWidth / 3, window.innerHeight / 2, 256, 256, 'https://github.com/hungweiwu/minecraft-virus-mod', 'img/minecraft_title.png', 220, 25);
+    var minecraft = new Icon('img/minecraft.png', window.innerWidth / 4, window.innerHeight / 2, 256, 256, 'https://github.com/hungweiwu/minecraft-virus-mod', 'img/minecraft_title.png', 220, 25);
     var macbot = new Icon('img/macbot.png', window.innerWidth / 2, window.innerHeight / 2, 512, 512, 'https://github.com/hungweiwu/MacBotV1', 'img/macbot_title.png', 113, 24);
-    var zookeeper = new Icon('img/zookeeper.gif', window.innerWidth * 2 / 3, window.innerHeight / 2, 300, 308, 'https://github.com/hungweiwu/zookeeper-bot', 'img/zookeeper_title.png', 205, 25);
+    var zookeeper = new Icon('img/zookeeper.gif', window.innerWidth * 3 / 4, window.innerHeight / 2, 300, 308, 'https://github.com/hungweiwu/zookeeper-bot', 'img/zookeeper_title.png', 205, 25);
     rooms_icons[3] = [minecraft, macbot, zookeeper];
 
     Directions = {
