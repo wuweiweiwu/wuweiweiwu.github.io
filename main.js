@@ -25,8 +25,6 @@ function init() {
     //  ctx.globalCompositeOperation = 'destination-over';
     sprites = new Sprites('img/sprite_sheet.png', sheet_width, sheet_height, per_row, per_column);
 
-    background = new Background('img/all_rooms.png', all_room_width, all_room_height, room_per_row, room_per_column);
-
     portal = new Portal('img/portal.png', [0, 2, 5, 8, 6], window.innerWidth / 3, window.innerWidth / 3);
 
     //drawing icons
@@ -50,6 +48,16 @@ function init() {
     var macbot = new Icon('img/macbot.png', window.innerWidth / 2, window.innerHeight / 2, 512, 512, 'https://github.com/hungweiwu/MacBotV1', 'img/macbot_title.png', 113, 24);
     var zookeeper = new Icon('img/zookeeper.gif', window.innerWidth * 3 / 4, window.innerHeight / 2, 300, 308, 'https://github.com/hungweiwu/zookeeper-bot', 'img/zookeeper_title.png', 205, 25);
     rooms_icons[3] = [minecraft, macbot, zookeeper];
+
+//move backgorund loading to the end
+
+    background_img = new Image();
+    background_img.src = 'img/all_rooms.png';
+    background_img.addEventListener('load', function() {
+      document.getElementById('loading').style.visibility = 'hidden';
+    }, false);
+
+    background = new Background(background_img, all_room_width, all_room_height, room_per_row, room_per_column);
 
     Directions = {
         LEFT: 0,

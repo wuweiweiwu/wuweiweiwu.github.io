@@ -1,6 +1,5 @@
-function Person(src, speed) {
-    this.img = new Image();
-    this.img.src = src;
+function Person(img, speed) {
+    this.img = img;
     //center of the image
     this.x = this.randomX();
     this.y = this.randomY();

@@ -6,7 +6,7 @@ body {
     position: relative;
     color: black;
     background: white;
-    font-family: "arial";
+    font-family: "Courier New";
     font-size: 100%;
     font-weight: 400;
     -webkit-touch-callout: none;
@@ -32,9 +32,20 @@ body {
     color: #bdaaff;
     font-size: 25px;
     visibility: hidden;
-    /*text-shadow: 1px 1px #2a2f0d;*/
   }
-
+  .loading {
+      max-width: 800px;
+      margin-left: -400px;
+      margin-top: -200px;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      line-height: 1.2;
+      color: #b9ed77;
+      font-size: 100px;
+      visibility: visible;
+      text-shadow: 1px 1px #85d044;
+    }
 a {
     color: #00fff0;
     text-decoration: none;

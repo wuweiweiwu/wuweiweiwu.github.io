@@ -26,14 +26,27 @@ function init() {
 
     segment_list = [];
 
-    head = new Segment('img/head.png', null, window.innerWidth / 2, window.innerHeight / 2, head_width, head_height, 4);
-    segment = new Segment('img/middle.png', head, head.leadx, head.leady, segment_width, segment_height, 4);
+    food_img = new Image();
+    food_img.src = 'img/food.png';
+    seg_img = new Image();
+    seg_img.src = 'img/middle.png';
+    tail_img = new Image();
+    tail_img.src = 'img/end.png';
+    head_img = new Image();
+    head_img.src = 'img/head.png';
+
+    head_img.addEventListener('load', function() {
+      document.getElementById('loading').style.visibility = 'hidden';
+    }, false);
+
+    head = new Segment(head_img, null, window.innerWidth / 2, window.innerHeight / 2, head_width, head_height, 4);
+    segment = new Segment(seg_img, head, head.leadx, head.leady, segment_width, segment_height, 4);
     segment_list.push(segment);
-    tail = new Segment('img/end.png', segment, segment.leadx, segment.leady, end_width, end_height, 4);
+    tail = new Segment(tail_img, segment, segment.leadx, segment.leady, end_width, end_height, 4);
 
     food_width = 139;
     food_height = 98;
-    food = new Food('img/food.png',food_width, food_height);
+    food = new Food(food_img,food_width, food_height);
 
     prev_seg_score = 0;
     window.requestAnimationFrame(draw);
@@ -57,7 +70,7 @@ function getScore() {
 
 function addSegment() {
     lastSeg = segment_list[segment_list.length - 1];
-    newSeg = new Segment('img/middle.png', lastSeg, lastSeg.leadx, lastSeg.leady, segment_width, segment_height, 4);
+    newSeg = new Segment(seg_img, lastSeg, lastSeg.leadx, lastSeg.leady, segment_width, segment_height, 4);
     segment_list.push(newSeg);
     tail.prev = newSeg;
 }
@@ -67,7 +80,7 @@ function draw() {
 
     if (intersect(head, food)) {
         addScore();
-        food = new Food('img/food.png',food_width, food_height);
+        food = new Food(food_img,food_width, food_height);
     }
 
     if (getScore() % 2 == 0 && getScore() > prev_seg_score) {

@@ -1,6 +1,5 @@
-function Background(src, width, height, per_row, per_column) {
-    this.img = new Image();
-    this.img.src = src;
+function Background(img, width, height, per_row, per_column) {
+    this.img = img;
     this.width = width;
     this.height = height;
     this.per_row = per_row;

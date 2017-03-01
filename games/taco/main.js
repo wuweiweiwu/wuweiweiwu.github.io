@@ -27,6 +27,11 @@ function init() {
     c_bottom.src = 'img/christina_bottom.png';
     bottom_width = 190;
     bottom_height = 77;
+
+    c_bottom.addEventListener('load', function() {
+      document.getElementById('loading').style.visibility = 'hidden';
+    }, false);
+
     window.requestAnimationFrame(draw);
 }
 var offset = 0;

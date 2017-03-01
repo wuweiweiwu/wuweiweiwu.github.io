@@ -23,13 +23,27 @@ function init() {
         showLines = (showLines + 1) % 2;
     });
 
-    trump = new Person('img/trump.png', 1);
-    carson = new Person('img/carson.png', 2);
-    hillary = new Person('img/hillary.png', 3);
-    pence = new Person('img/pence.png', 4);
+    t = new Image();
+    t.src = 'img/trump.png';
+    c = new Image();
+    c.src = 'img/carson.png';
+    h = new Image();
+    h.src = 'img/hillary.png';
+    p = new Image();
+    p.src = 'img/pence.png';
+    b = new Image();
+    b.src = 'img/bernie.png';
 
+    b.addEventListener('load', function() {
+      document.getElementById('loading').style.visibility = 'hidden';
+    }, false);
 
-    me = new Person('img/bernie.png', 5);
+    trump = new Person(t, 1);
+    carson = new Person(c, 2);
+    hillary = new Person(h, 3);
+    pence = new Person(p, 4);
+
+    me = new Person(b, 5);
     // me.grow();
     me.grow();
     me.grow();

@@ -21,6 +21,21 @@ body {
     color: black;
 }
 
+.loading {
+    max-width: 800px;
+    margin-left: -400px;
+    margin-top: -200px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    line-height: 1.2;
+    color: #b9ed77;
+    font-size: 100px;
+    visibility: visible;
+    text-shadow: 1px 1px #85d044;
+  }
+
+
 .text {
     max-width: 400px;
     margin-left: -200px;

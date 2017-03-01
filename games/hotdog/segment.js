@@ -1,6 +1,5 @@
-function Segment(src, prev, x, y, w, h, speed) {
-    this.img = new Image();
-    this.img.src = src;
+function Segment(img, prev, x, y, w, h, speed) {
+    this.img = img;
     this.prev = prev;
     this.x = x;
     this.y = y;
