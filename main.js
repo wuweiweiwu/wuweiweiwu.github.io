@@ -25,7 +25,7 @@ function init() {
     //  ctx.globalCompositeOperation = 'destination-over';
     sprites = new Sprites('img/sprite_sheet.png', sheet_width, sheet_height, per_row, per_column);
 
-    portal = new Portal('img/portal.png', [0, 2, 5, 8, 6], window.innerWidth / 3, window.innerWidth / 3);
+    portal = new Portal('img/portal.png', [0, 2, 5, 8, 6], window.innerWidth / 4, window.innerWidth / 4);
 
     //drawing icons
     rooms_icons = [
