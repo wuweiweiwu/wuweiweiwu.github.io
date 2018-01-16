@@ -1,6 +1,6 @@
-- name: React Pretty Interaction Icons
+- name: React Pretty Interaction Icon
   client: Personal
-  description: Simply beautiful animated icons. Feather Icons animated with animejs, animate.css, bounce.js
+  description: Simply beautiful animated icon. Feather Icons animated with animejs, animate.css, bounce.js
   link: https://github.com/wuweiweiwu/react-pretty-interaction-icon
 
 - name: Tinderly
