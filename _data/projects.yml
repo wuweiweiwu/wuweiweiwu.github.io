@@ -1,21 +1,21 @@
 - name: React Pretty Interaction Icons
   client: Personal
-  description: Simply beautiful animated icons
+  description: Simply beautiful animated icons. Feather Icons animated with animejs, animate.css, bounce.js
   link: https://github.com/wuweiweiwu/react-pretty-interaction-icon
 
 - name: Tinderly
   client: Personal
-  description: Tinder + Machine Learning. Chrome plugin for Tinder.com
+  description: Tinder + Machine Learning. Chrome plugin for Tinder.com. Uses the Kairos sentiment analysis API
   link: https://chrome.google.com/webstore/detail/tinderly-tinder-with-mach/mdkobmclngihinplcodbehpmocchnmob
 
 - name: Deep QWOP Learning
-  client: Personal
+  client: University Honors Program
   description: Honors Thesis (cum laude) under the supervision of Maria Gini and James Parker
   link: https://github.com/wuweiweiwu/qwop-thesis/blob/master/thesis.pdf
 
 - name: MacBot
-  client: Personal
-  description: Conversational AI that controls your computer (created at SpartaHacks 2016)
+  client: Hackathon
+  description: Conversational AI that controls your computer. Play music, send messages, open apps, etc. (created at SpartaHacks 2016)
   link: https://devpost.com/software/macbotv1
 
 - name: Beehive
