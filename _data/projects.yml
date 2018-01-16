@@ -1,0 +1,24 @@
+- name: React Pretty Interaction Icons
+  client: Personal
+  description: Simply beautiful animated icons
+  link: https://github.com/wuweiweiwu/react-pretty-interaction-icon
+
+- name: Tinderly
+  client: Personal
+  description: Tinder + Machine Learning. Chrome plugin for Tinder.com
+  link: https://chrome.google.com/webstore/detail/tinderly-tinder-with-mach/mdkobmclngihinplcodbehpmocchnmob
+
+- name: Deep QWOP Learning
+  client: Personal
+  description: Honors Thesis (cum laude) under the supervision of Maria Gini and James Parker
+  link: https://github.com/wuweiweiwu/qwop-thesis/blob/master/thesis.pdf
+
+- name: MacBot
+  client: Personal
+  description: Conversational AI that controls your computer (created at SpartaHacks 2016)
+  link: https://devpost.com/software/macbotv1
+
+- name: Beehive
+  client: Research Experiences for Undergraduates (REU)
+  description: Under the supervision Prof. Anand Tripathi. A graph processing framework based on Optimistic Concurrency Control
+  link: http://ajanta.cs.umn.edu/
