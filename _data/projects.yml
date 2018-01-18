@@ -1,3 +1,8 @@
+- name: React Sortable Tree
+  client: Open Source
+  description: Drag-and-drop sortable representation of hierarchical data. 1446 stars and 264 forks.
+  link: http://theweiweiwu.com/react-sortable-tree/
+
 - name: React Pretty Interaction Icon
   client: Personal
   description: Simply beautiful animated icon. Feather Icons animated with animejs, animate.css, bounce.js
