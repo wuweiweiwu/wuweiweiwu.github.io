@@ -6,6 +6,10 @@
         <a class="db no-underline black-80 color-animate hover-dark-red" href="{{ project.link }}">
           <p class="mt0 mb1 f7 f6-ns fw5 lh-copy ttu tracked black-40">{{ project.client }}</p>
           <h3 class="mt0 mb1 mb2-ns f3 f2-ns fw5 lh-copy measure-narrow">{{ project.name }}</h3>
+          {% if project.author and project.repo %}
+            <a class="github-button" href="https://github.com/{{ project.author }}/{{ project.repo }}" data-icon="octicon-star" data-show-count="true" aria-label="Star {{ project.author }}/{{ project.repo }} on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/{{ project.author }}/{{ project.repo }}/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork {{ project.author }}/{{ project.repo }} on GitHub">Fork</a>
+          {% endif %}
           <p class="mv0 lh-copy measure black-60">{{ project.description }}</p>
         </a>
       </li>
