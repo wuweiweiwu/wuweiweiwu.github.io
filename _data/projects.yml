@@ -12,6 +12,11 @@
   author: fritz-c
   repo: react-image-lightbox
 
+- name: React Isometric Grid
+  client: Personal
+  description: Isometric grid component for displaying images with React and Dynamic.s
+  link: http://weiweiwu.me/react-isometric-grid/
+
 - name: React Pretty Interaction Icon
   client: Personal
   description: Simply beautiful animated icon. Feather Icons animated with animejs, animate.css, bounce.js
