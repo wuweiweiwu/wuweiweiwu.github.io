@@ -17,6 +17,16 @@
   description: Isometric grid component for displaying images with React and Dynamic.js
   link: http://weiweiwu.me/react-isometric-grid/
 
+- name: Beehive
+  client: Research Experiences for Undergraduates (REU)
+  description: Under the supervision Prof. Anand Tripathi. A graph processing framework based on Optimistic Concurrency Control
+  link: http://ajanta.cs.umn.edu/
+
+- name: Deep QWOP Learning
+  client: University Honors Program
+  description: Honors Thesis (cum laude) under the supervision of Maria Gini and James Parker
+  link: https://www.dropbox.com/s/sgtnjikv3926zyh/thesis%20%285%29.pdf?dl=0
+
 - name: React Pretty Interaction Icon
   client: Personal
   description: Simply beautiful animated icon. Feather Icons animated with animejs, animate.css, bounce.js
@@ -27,17 +37,7 @@
   description: Tinder + Machine Learning. Chrome plugin for Tinder.com. Uses the Kairos sentiment analysis API
   link: https://chrome.google.com/webstore/detail/tinderly-tinder-with-mach/mdkobmclngihinplcodbehpmocchnmob
 
-- name: Deep QWOP Learning
-  client: University Honors Program
-  description: Honors Thesis (cum laude) under the supervision of Maria Gini and James Parker
-  link: https://www.dropbox.com/s/sgtnjikv3926zyh/thesis%20%285%29.pdf?dl=0
-
 - name: MacBot
   client: Hackathon
   description: Conversational AI that controls your computer. Play music, send messages, open apps, etc. (created at SpartaHacks 2016)
   link: https://devpost.com/software/macbotv1
-
-- name: Beehive
-  client: Research Experiences for Undergraduates (REU)
-  description: Under the supervision Prof. Anand Tripathi. A graph processing framework based on Optimistic Concurrency Control
-  link: http://ajanta.cs.umn.edu/
