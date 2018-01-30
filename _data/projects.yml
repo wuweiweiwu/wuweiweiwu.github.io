@@ -16,6 +16,8 @@
   client: Personal
   description: Isometric grid component for displaying images with React and Dynamic.js
   link: http://weiweiwu.me/react-isometric-grid/
+  author: wuweiweiwu
+  repo: react-isometric-grid
 
 - name: Beehive
   client: Research Experiences for Undergraduates (REU)
