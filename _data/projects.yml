@@ -29,10 +29,10 @@
   description: Honors Thesis (cum laude) under the supervision of Maria Gini and James Parker
   link: https://www.dropbox.com/s/sgtnjikv3926zyh/thesis%20%285%29.pdf?dl=0
 
-- name: React Pretty Interaction Icon
-  client: Personal
-  description: Simply beautiful animated icon. Feather Icons animated with animejs, animate.css, bounce.js
-  link: https://github.com/wuweiweiwu/react-pretty-interaction-icon
+# - name: React Pretty Interaction Icon
+#   client: Personal
+#   description: Simply beautiful animated icon. Feather Icons animated with animejs, animate.css, bounce.js
+#   link: https://github.com/wuweiweiwu/react-pretty-interaction-icon
 
 - name: Tinderly
   client: Personal
