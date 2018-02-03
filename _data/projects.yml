@@ -19,6 +19,11 @@
   author: wuweiweiwu
   repo: react-isometric-grid
 
+- name: React Letter Morph
+  client: Personal
+  description: Animated letter transitions inspired by Google I/O 2016 website
+  link: http://weiweiwu.me/react-letter-morph/
+
 - name: Beehive
   client: Research Experiences for Undergraduates (REU)
   description: Under the supervision Prof. Anand Tripathi. A graph processing framework based on Optimistic Concurrency Control
