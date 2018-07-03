@@ -1,0 +1,20 @@
+{
+	"name": "wuweiweiwu.github.io",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/wuweiweiwu/wuweiweiwu.github.io",
+	"author": "Wei-Wei Wu <wuxx1045@umn.edu>",
+	"license": "MIT",
+	"scripts": {
+		"start": "parcel index.html"
+	},
+	"dependencies": {
+		"react": "^16.4.1",
+		"react-dom": "^16.4.1"
+	},
+	"devDependencies": {
+		"babel-preset-env": "^1.7.0",
+		"babel-preset-react": "^6.24.1",
+		"parcel-bundler": "^1.9.4"
+	}
+}
