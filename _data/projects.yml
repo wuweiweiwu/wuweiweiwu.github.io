@@ -7,7 +7,7 @@
 
 - name: Storybook
   client: Open Source
-  description: Interactive UI component dev & test: React, React Native, Vue, Angular, Ember
+  description: "Interactive UI component dev & test: React, React Native, Vue, Angular, Ember"
   link: https://storybook.js.org/
   author: storybooks
   repo: storybook
