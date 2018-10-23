@@ -5,6 +5,13 @@
   author: bvaughn
   repo: react-virtualized
 
+- name: Storybook
+  client: Open Source
+  description: Interactive UI component dev & test: React, React Native, Vue, Angular, Ember
+  link: https://storybook.js.org/
+  author: storybooks
+  repo: storybook
+
 - name: React Sortable Tree
   client: Open Source
   description: Drag-and-drop sortable representation of hierarchical data
@@ -25,11 +32,6 @@
   link: http://weiweiwu.me/react-isometric-grid/
   author: wuweiweiwu
   repo: react-isometric-grid
-
-- name: React Letter Morph
-  client: Personal
-  description: Animated letter transitions inspired by Google I/O 2016 website
-  link: http://weiweiwu.me/react-letter-morph/
 
 - name: Beehive
   client: Research Experiences for Undergraduates (REU)
