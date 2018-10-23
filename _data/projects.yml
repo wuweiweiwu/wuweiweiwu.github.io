@@ -1,3 +1,10 @@
+- name: React Virtualized
+  client: Open Source
+  description: React components for efficiently rendering large lists and tabular data
+  link: http://www.reactvirtualized.com/
+  author: bvaughn
+  repo: react-virtualized
+
 - name: React Sortable Tree
   client: Open Source
   description: Drag-and-drop sortable representation of hierarchical data
