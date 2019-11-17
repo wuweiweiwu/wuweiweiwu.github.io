@@ -50,16 +50,6 @@
   description: Honors Thesis (cum laude) under the supervision of Maria Gini and James Parker
   link: https://www.dropbox.com/s/sgtnjikv3926zyh/thesis%20%285%29.pdf?dl=0
 
-# - name: React Pretty Interaction Icon
-#   client: Personal
-#   description: Simply beautiful animated icon. Feather Icons animated with animejs, animate.css, bounce.js
-#   link: https://github.com/wuweiweiwu/react-pretty-interaction-icon
-
-# - name: Tinderly
-#   client: Personal
-#   description: Tinder + Machine Learning. Chrome plugin for Tinder.com. Uses the Kairos sentiment analysis API
-#   link: https://chrome.google.com/webstore/detail/tinderly-tinder-with-mach/mdkobmclngihinplcodbehpmocchnmob
-
 - name: MacBot
   client: Hackathon
   description: Conversational AI that controls your computer. Play music, send messages, open apps, etc. (created at SpartaHacks 2016)
