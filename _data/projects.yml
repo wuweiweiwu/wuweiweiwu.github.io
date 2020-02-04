@@ -1,10 +1,3 @@
-- name: React Virtualized
-  client: Open Source
-  description: React components for efficiently rendering large lists and tabular data
-  link: http://www.reactvirtualized.com/
-  author: bvaughn
-  repo: react-virtualized
-
 - name: Storybook
   client: Open Source
   description: "Interactive UI component dev & test: React, React Native, Vue, Angular, Ember"
@@ -12,12 +5,19 @@
   author: storybooks
   repo: storybook
 
-- name: React Sortable Tree
+- name: Rollup Plugins
   client: Open Source
-  description: Drag-and-drop sortable representation of hierarchical data
-  link: http://weiweiwu.me/react-sortable-tree/
-  author: fritz-c
-  repo: react-sortable-tree
+  description: 🍣 The one-stop shop for official Rollup plugins
+  link: https://github.com/rollup/plugins
+  author: rollup
+  repo: plugins
+
+- name: React Virtualized
+  client: Open Source
+  description: React components for efficiently rendering large lists and tabular data
+  link: http://www.reactvirtualized.com/
+  author: bvaughn
+  repo: react-virtualized
 
 - name: React Split Pane
   client: Open Source
@@ -26,19 +26,19 @@
   author: tomkp
   repo: react-split-pane
 
+- name: React Sortable Tree
+  client: Open Source
+  description: Drag-and-drop sortable representation of hierarchical data
+  link: http://weiweiwu.me/react-sortable-tree/
+  author: fritz-c
+  repo: react-sortable-tree
+
 - name: React Image Lightbox
   client: Open Source
   description: Flexible lightbox component for displaying images with React
   link: http://weiweiwu.me/react-image-lightbox/
   author: fritz-c
   repo: react-image-lightbox
-
-- name: React Isometric Grid
-  client: Personal
-  description: Isometric grid component for displaying images with React and Dynamic.js
-  link: http://weiweiwu.me/react-isometric-grid/
-  author: wuweiweiwu
-  repo: react-isometric-grid
 
 - name: Beehive
   client: Research Experiences for Undergraduates (REU)
@@ -49,8 +49,3 @@
   client: University Honors Program
   description: Honors Thesis (cum laude) under the supervision of Maria Gini and James Parker
   link: https://www.dropbox.com/s/sgtnjikv3926zyh/thesis%20%285%29.pdf?dl=0
-
-- name: MacBot
-  client: Hackathon
-  description: Conversational AI that controls your computer. Play music, send messages, open apps, etc. (created at SpartaHacks 2016)
-  link: https://devpost.com/software/macbotv1
