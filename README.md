@@ -1,4 +1,3 @@
 # wuweiweiwu.github.io
-Personal website :shell:
 
-v4 :)
+Personal website
